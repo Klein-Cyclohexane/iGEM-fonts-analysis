@@ -16,3 +16,5 @@ temp_*
 
 # Claude local settings
 .claude/settings.local.json
+
+*.md
