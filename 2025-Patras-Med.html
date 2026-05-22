@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — Patras Med MORPHE 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-primary: 'Noto Serif', serif;
+      --font-heading-footer: 'Bitter', serif;
+      --font-sans: 'Montserrat', sans-serif;
+      --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      --color-bg: #0a1628;
+      --color-text: #e8e6e3;
+      --color-coral: #FA7268;
+      --color-navy: #090839;
+      --color-teal: #1abc9c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-primary);
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--color-coral);
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #8899bb;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #0f1f3a;
+      border: 1px solid #1a3a5c;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-coral);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #6b85a8;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight row ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.25rem;
+      color: var(--color-text);
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b85a8;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 700; }
+    .alphabet-grid .row .lower { color: #6b85a8; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: var(--color-teal);
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.75;
+      font-size: 1.05rem;
+      color: #c8d4e2;
+      max-width: 72ch;
+    }
+
+    /* ---- Hero ---- */
+    .hero-heading {
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: var(--color-coral);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- Nav ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background: var(--color-navy);
+      padding: 0.6rem 1.5rem;
+      border-radius: 2.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    .nav-sample .nav-item {
+      color: #fff;
+      cursor: default;
+      position: relative;
+      padding: 0.5rem 0.75rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-sample .nav-item:hover { color: var(--color-coral); }
+    .nav-sample .nav-item.active {
+      color: #fff;
+      position: relative;
+    }
+    .nav-sample .nav-item.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--color-teal);
+      border-radius: 3px;
+    }
+    .nav-sample .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--color-coral);
+      margin-right: auto;
+      text-transform: none;
+    }
+    .nav-sample .nav-glow {
+      color: var(--color-coral);
+      text-shadow: 0 0 8px #FA7268, 0 0 16px #FA7268, 0 0 24px #FA7268;
+    }
+
+    /* ---- Dropdown ---- */
+    .dropdown-sample {
+      background: var(--color-navy);
+      border-radius: 0.75rem;
+      padding: 0.75rem 0;
+      min-width: 200px;
+      margin-top: 0.75rem;
+    }
+    .dropdown-sample .dropdown-item {
+      color: #fff;
+      padding: 0.5rem 1.25rem;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .dropdown-sample .dropdown-item:hover { color: var(--color-coral); }
+
+    /* ---- Footer (Noto Serif VF) ---- */
+    .site-footer {
+      background: var(--color-coral);
+      color: #fff;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    /* ---- Footer headings (Bitter VF) ---- */
+    .contact-col h4, .sponsors-title {
+      font-family: var(--font-heading-footer);
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .contact-col p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* ---- Montserrat ---- */
+    .montserrat-header {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-teal);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: var(--bs-font-monospace);
+      background: #090839;
+      color: #1abc9c;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #FA7268; }
+    .code-block .str { color: #e8e6e3; }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">MORPHE</div>
+  <div class="page-subtitle">Font Scheme — Patras Med iGEM 2025 &middot; Three variable fonts: Noto Serif + Bitter + Montserrat</div>
+
+  <!-- ==================== NOTO SERIF ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Noto Serif VF (Variable)</div>
+    <div class="section-note">Self-hosted variable .woff2/.ttf (100–900 weight + width axis + italic). Used for body text, footer content, and dropdown menus. A versatile serif with exceptional readability.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+
+    <div class="weight-row">
+      <div><div class="label">Light 300 Italic</div><div class="item" style="font-weight:300;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400 Italic</div><div class="item" style="font-weight:400;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600 Italic</div><div class="item" style="font-weight:600;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700 Italic</div><div class="item" style="font-weight:700;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADING & HERO ==================== -->
+  <section>
+    <div class="section-label">Headings — Noto Serif in Context</div>
+    <div class="section-note">The wiki uses Noto Serif throughout: hero text, body content, dropdown navigation, and footer.</div>
+
+    <div class="hero-heading">iGEM 2026 SHTU</div>
+    <p style="font-size:0.8rem;color:#6b85a8;margin-bottom:1.5rem;">— 800 weight, coral (#FA7268), serif hero display</p>
+
+    <div style="font-weight:700;font-size:1.6rem;color:#fff;margin-bottom:0.25rem;">Breaking the Stigma of Obesity</div>
+    <p style="font-size:0.8rem;color:#6b85a8;margin-bottom:1.5rem;">— 700 weight section heading</p>
+
+    <p style="font-weight:400;font-size:1.1rem;color:#c8d4e2;max-width:72ch;line-height:1.7;">
+      Morphe targets AgRP neurons in the arcuate nucleus of the hypothalamus using miRNA-based gene therapy delivered via AAV9 vectors. By modulating appetite-regulating circuits, we aim to provide a precision medicine approach to obesity treatment.
+    </p>
+    <p style="font-size:0.8rem;color:#6b85a8;margin-top:0.25rem;">— 400 weight body text, Noto Serif</p>
+  </section>
+
+  <!-- ==================== BODY & ALPHABET ==================== -->
+  <section>
+    <div class="section-label">Body — Noto Serif Regular 400</div>
+    <div class="section-note">Noto Serif is a highly readable serif face designed for extended reading. Its variable width axis allows for compact or expanded text.</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#6b85a8;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#6b85a8;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#6b85a8;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Noto Serif VF</div>
+    <div class="section-note">Navbar: navy rounded pill (#090839), uppercase Noto Serif, coral glow on Awards. Dropdowns also use Noto Serif VF at 19px.</div>
+
+    <div class="nav-sample" style="margin-bottom:1rem;">
+      <span class="nav-logo">MORPHE</span>
+      <span class="nav-item active">Home</span>
+      <span class="nav-item">Team ▾</span>
+      <span class="nav-item">Project ▾</span>
+      <span class="nav-item">Wet Lab ▾</span>
+      <span class="nav-item">Dry Lab ▾</span>
+      <span class="nav-item">Engagement ▾</span>
+      <span class="nav-item">Entrepreneurship</span>
+      <span class="nav-item nav-glow">Awards</span>
+    </div>
+
+    <div class="dropdown-sample">
+      <div class="dropdown-item">Description</div>
+      <div class="dropdown-item">Engineering</div>
+      <div class="dropdown-item">Results - Proof of Concept</div>
+      <div class="dropdown-item">Proposed Implementation</div>
+      <div class="dropdown-item">Contributions</div>
+    </div>
+  </section>
+
+  <!-- ==================== BITTER ==================== -->
+  <section>
+    <div class="section-label">Secondary Serif — Bitter VF (Variable)</div>
+    <div class="section-note">Self-hosted variable .ttf (100–900 + italic). Used for footer section headings (.contact-col h4) and sponsor titles (.sponsors-title). A contemporary slab-serif with warmth.</div>
+
+    <div class="weight-row" style="font-family:var(--font-heading-footer);">
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">The quick brown fox jumps</div></div>
+    </div>
+
+    <div class="weight-row" style="font-family:var(--font-heading-footer);">
+      <div><div class="label">Light 300 Italic</div><div class="item" style="font-weight:300;font-style:italic;">The quick brown fox jumps</div></div>
+      <div><div class="label">Bold 700 Italic</div><div class="item" style="font-weight:700;font-style:italic;">The quick brown fox jumps</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER CONTEXT ==================== -->
+  <section>
+    <div class="section-label">Footer — Noto Serif (body) + Bitter (headings)</div>
+    <div class="section-note">Replicating the wiki's .site-footer: background #FA7268, body text in Noto Serif VF, section headings in Bitter VF.</div>
+
+    <div class="site-footer" style="font-family:var(--font-primary);">
+      <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+        <div class="contact-col" style="flex:1;min-width:200px;">
+          <h4>Contact</h4>
+          <p>patrasmedigem2025@gmail.com</p>
+          <p>University of Patras, Greece</p>
+          <p>Medical School</p>
+        </div>
+        <div class="contact-col" style="flex:1;min-width:200px;">
+          <h4>Quick Links</h4>
+          <p>Project Description</p>
+          <p>Results</p>
+          <p>Team Members</p>
+        </div>
+        <div class="contact-col" style="flex:1;min-width:200px;">
+          <div class="sponsors-title">Sponsors</div>
+          <p>Supported by the University of Patras</p>
+          <p>and the iGEM Foundation</p>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.3);font-size:0.8rem;opacity:0.8;">
+        © 2025 Patras Med iGEM — CC BY 4.0
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#6b85a8;margin-top:0.75rem;">— .site-footer in <strong>Noto Serif VF</strong> | h4 / .sponsors-title in <strong>Bitter VF</strong></p>
+  </section>
+
+  <!-- ==================== MONTSERRAT ==================== -->
+  <section>
+    <div class="section-label">Sans-Serif — Montserrat VF (Variable)</div>
+    <div class="section-note">Self-hosted variable .ttf (100–900 + italic). A geometric sans-serif. Loaded in the font stack for unique accents or UI elements.</div>
+
+    <div class="weight-row" style="font-family:var(--font-sans);">
+      <div><div class="label">Thin 100</div><div class="item" style="font-weight:100;">The quick brown fox jumps</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">The quick brown fox jumps</div></div>
+    </div>
+
+    <div class="montserrat-header">MORPHE 2026</div>
+    <p style="font-family:var(--font-sans);font-weight:400;color:#c8d4e2;max-width:60ch;">
+      Montserrat provides a clean geometric contrast when needed — for labels, buttons, or accent text alongside the serif-dominant palette.
+    </p>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — System Monospace Stack</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">Patras Med takes a bold approach: a serif-dominant palette with three variable fonts, all self-hosted.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-coral);margin-bottom:0.5rem;">Noto Serif VF</div>
+        <div style="color:#c8d4e2;line-height:2;font-size:0.9rem;">
+          body / p / text content<br>
+          .site-footer (footer body)<br>
+          .dropdown-item / .dropdown-menu<br>
+          .nav-link (navbar)<br>
+          hero headings / display text<br>
+          wght 100–900 + wdth axis + italic
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-coral);margin-bottom:0.5rem;">Bitter VF + Montserrat VF</div>
+        <div style="color:#c8d4e2;line-height:2;font-size:0.9rem;">
+          <strong>Bitter</strong>: .contact-col h4, .sponsors-title<br>
+          <strong>Montserrat</strong>: loaded for accent/UI use<br>
+          Both 100–900 variable + italic<br>
+          <span style="color:#6b85a8;">All three: .woff2 + .ttf self-hosted</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

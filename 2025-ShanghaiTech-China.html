@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — ShanghaiTech China DOCTOR 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-thin-13.otf') format('opentype');
+      font-weight: 100; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-thinitalic-14.otf') format('opentype');
+      font-weight: 100; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-light-11.otf') format('opentype');
+      font-weight: 300; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-lightitalic-12.otf') format('opentype');
+      font-weight: 300; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-regular-3.otf') format('opentype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-medium-2.otf') format('opentype');
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-bold-4.otf') format('opentype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-extrabold.otf') format('opentype');
+      font-weight: 800; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-extrabolditalic-10.otf') format('opentype');
+      font-weight: 800; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/radomir-tinkov-gilroy-heavy-9.otf') format('opentype');
+      font-weight: 900; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-heavyitalic-8.otf') format('opentype');
+      font-weight: 900; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-black-6.otf') format('opentype');
+      font-weight: 950; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-blackitalic-7.otf') format('opentype');
+      font-weight: 950; font-style: italic; font-display: swap;
+    }
+
+    :root {
+      --font-main: 'Gilroy', sans-serif;
+      --color-green: #00a657;
+      --color-dark: #1a1a1a;
+      --color-bg: #f5f5f5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9, #e0f2f1);
+      color: var(--color-dark);
+      font-family: var(--font-main);
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-title {
+      font-weight: 900;
+      font-size: 3rem;
+      color: var(--color-green);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #c8e6c9;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .section-label {
+      font-weight: 700;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-green);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight display ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.2rem;
+      color: var(--color-dark);
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Heading ---- */
+    .hero-heading {
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: var(--color-dark);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .section-h2 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--color-green);
+      margin-bottom: 0.5rem;
+    }
+    .small-label {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 800; }
+    .alphabet-grid .row .lower { color: #888; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: #444;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      max-width: 72ch;
+    }
+
+    /* ---- Nav sample ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--color-dark);
+      padding: 0.6rem 0;
+      border-bottom: 2px solid var(--color-green);
+    }
+    .nav-sample .nav-item { cursor: default; transition: color 0.2s; }
+    .nav-sample .nav-item:hover { color: var(--color-green); }
+    .nav-sample .nav-logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--color-green);
+      margin-right: auto;
+      text-transform: uppercase;
+    }
+
+    /* ---- Back to Top button ---- */
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #222;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.65rem;
+      text-align: center;
+      line-height: 1.2;
+      cursor: default;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #00a657; }
+    .code-block .str { color: #a5d6a7; }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">DOCTOR</div>
+  <div class="page-subtitle">Font Scheme — ShanghaiTech China iGEM 2025 &middot; Gilroy-only system</div>
+
+  <!-- ==================== GILROY ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Gilroy</div>
+    <div class="section-note">Self-hosted as 13 .otf files. An extensive weight range (100–950) of a premium geometric sans-serif by Radomir Tinkov. Used for everything — headings, body, nav, buttons, labels.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Thin 100</div><div class="item" style="font-weight:100;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">ExtraBold 800</div><div class="item" style="font-weight:800;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Heavy 900</div><div class="item" style="font-weight:900;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Black 950</div><div class="item" style="font-weight:950;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+
+    <div class="weight-row">
+      <div><div class="label">Thin 100 Italic</div><div class="item" style="font-weight:100;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Light 300 Italic</div><div class="item" style="font-weight:300;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">ExtraBold 800 Italic</div><div class="item" style="font-weight:800;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Heavy 900 Italic</div><div class="item" style="font-weight:900;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Black 950 Italic</div><div class="item" style="font-weight:950;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADING ==================== -->
+  <section>
+    <div class="section-label">Headings — Gilroy Black / Heavy</div>
+    <div class="hero-heading">iGEM 2026 SHTU</div>
+    <p style="font-weight:400;color:#888;margin-bottom:1.5rem;">— 900 weight, geometric sans-serif, clean and modern</p>
+
+    <div class="section-h2">Project Description</div>
+    <p style="font-weight:400;color:#555;max-width:72ch;margin-bottom:1.5rem;">
+      DOCTOR (Detection Of Circulating Tumor DNA via Oligonucleotide Recognition) develops a novel CRISPR-based liquid biopsy platform for early cancer detection using cfDNA biomarkers.
+    </p>
+
+    <div class="section-h2">Experimental Design</div>
+    <p style="font-weight:400;color:#555;max-width:72ch;">
+      We combine Cas12a trans-cleavage activity with aptamer-based target recognition to achieve multiplexed, amplification-free detection of tumor-specific mutations at sub-femtomolar concentrations.
+    </p>
+
+    <div style="margin-top:1.5rem;display:flex;gap:2rem;align-items:flex-end;">
+      <div>
+        <div class="small-label">Small labels / captions</div>
+        <p style="font-weight:500;margin-top:0.25rem;">Gilroy Medium 500 — clean, legible at small sizes</p>
+      </div>
+      <div class="back-to-top">Back<br>To Top</div>
+    </div>
+    <p style="font-weight:400;color:#888;margin-top:0.75rem;">— Back-to-Top button uses Gilroy 700, 12px</p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — Gilroy Regular 400</div>
+    <div class="section-note">Gilroy's geometric proportions and generous x-height make it a distinctive body text choice. Slightly wider than Inter, with a more pronounced personality.</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+
+    <p style="font-size:0.8rem;color:#888;margin-top:0.5rem;">— Note: Gilroy as body text has a wider, more geometric feel than Inter or Poppins. The .otf format files (~13 total) are larger than equivalent .woff2 files.</p>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Gilroy Medium / Bold</div>
+    <div class="section-note">Nav uses Gilroy 500–700 weight. Clean geometric sans-serif for navigation links.</div>
+    <div class="nav-sample">
+      <span class="nav-logo">DOCTOR</span>
+      <span class="nav-item">Home</span>
+      <span class="nav-item">Project ▾</span>
+      <span class="nav-item">Wet Lab ▾</span>
+      <span class="nav-item">Dry Lab ▾</span>
+      <span class="nav-item">Human Practices ▾</span>
+      <span class="nav-item">Team ▾</span>
+      <span class="nav-item">Awards</span>
+    </div>
+
+    <!-- Font size controls (replica of wiki's accessibility feature) -->
+    <div style="margin-top:1.5rem;padding:1rem;background:#f9f9f9;border-radius:0.5rem;">
+      <div class="small-label">Font size controls</div>
+      <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+        <span style="font-weight:500;padding:0.3rem 0.8rem;background:#e0e0e0;border-radius:4px;font-size:0.8rem;">Small</span>
+        <span style="font-weight:500;padding:0.3rem 0.8rem;background:#e0e0e0;border-radius:4px;font-size:0.95rem;">Medium</span>
+        <span style="font-weight:500;padding:0.3rem 0.8rem;background:var(--color-green);color:#fff;border-radius:4px;font-size:1.1rem;">Large</span>
+      </div>
+      <p style="font-weight:400;font-size:0.8rem;color:#888;margin-top:0.5rem;">— The wiki includes a font-size toggle (Small/Medium/Large) for accessibility</p>
+    </div>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — System Monospace</div>
+    <div class="section-note">The wiki does not declare a specific code font. System monospace is used as the fallback.</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">ShanghaiTech China uses a single premium geometric sans-serif — Gilroy — with one of the widest weight ranges seen (100–950). All 13 files are self-hosted .otf files on the iGEM CDN.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-green);margin-bottom:0.5rem;">Font Loading</div>
+        <div style="color:#555;line-height:2;font-size:0.9rem;">
+          <strong>Gilroy</strong> — 13 .otf files<br>
+          Thin (100) · Thin Italic (100)<br>
+          Light (300) · Light Italic (300)<br>
+          Regular (400)<br>
+          Medium (500)<br>
+          Bold (700)<br>
+          ExtraBold (800) · ExtraBold Italic (800)<br>
+          Heavy (900) · Heavy Italic (900)<br>
+          Black (950) · Black Italic (950)<br>
+          <span style="color:#888;">Commented-out: HYMacintoshH1 (Chinese)</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-green);margin-bottom:0.5rem;">Notable Features</div>
+        <div style="color:#555;line-height:2;font-size:0.9rem;">
+          Single-font system (Gilroy only)<br>
+          Widest weight range: 100–950<br>
+          .otf format (not .woff2)<br>
+          Font size accessibility toggle<br>
+          All self-hosted on iGEM CDN<br>
+          Commented-out Chinese font ref
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

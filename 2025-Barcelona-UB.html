@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — Barcelona-UB SKIPPIT 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-font: 'Inter', sans-serif;
+      --code-font: 'JetBrains Mono', monospace;
+      --bg-main: #F5F3EE;
+      --color-text: #1a1a1a;
+      --color-primary: #d9413e;
+      --tadpole-color: #007B6E;
+      --fw-bold: 700;
+      --fs-h2: 2rem;
+      --fs-h3: 1.4rem;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg-main);
+      color: var(--color-text);
+      font-family: var(--main-font);
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--color-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #e5e0d8;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-weight: 700;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Inter Weight Spectrum ---- */
+    .weight-spectrum {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .weight-spectrum .item {
+      font-size: 1.25rem;
+      color: #1a1a1a;
+    }
+    .weight-spectrum .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      margin-bottom: 0.1rem;
+    }
+
+    .italic-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 2rem;
+      margin-bottom: 1rem;
+    }
+    .italic-row .item {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* ---- Heading ---- */
+    .hero-heading {
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: #1a1a1a;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .page-title-style {
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    .section-h2 {
+      font-weight: 700;
+      font-size: var(--fs-h2);
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .section-h3 {
+      font-weight: 600;
+      font-size: var(--fs-h3);
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    .bold-word {
+      font-weight: 800;
+      background-color: var(--tadpole-color);
+      color: var(--bg-main);
+      padding: 0.15em 0.35em;
+      border-radius: 12px 12px 0 0;
+    }
+    .highlight-word {
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    .italic-word {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 700; }
+    .alphabet-grid .row .lower { color: #888; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: #444;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      max-width: 72ch;
+    }
+
+    /* ---- Nav ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.6rem 1.5rem;
+      background: #fff;
+      border: 1px solid #e5e0d8;
+      border-radius: 0.5rem;
+    }
+    .nav-sample .nav-item {
+      color: #1a1a1a;
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .nav-sample .nav-item:hover { color: var(--color-primary); }
+    .nav-sample .nav-item.dropdown-toggle { font-weight: 600; }
+    .nav-sample .nav-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      margin-right: auto;
+    }
+
+    /* ---- Footer ---- */
+    .footer-sample {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      border-radius: 0.5rem;
+    }
+    .footer-sample .fw-bold {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-sample a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      transition: color 0.2s;
+    }
+    .footer-sample a:hover { color: #fff; }
+
+    /* ---- Content cards ---- */
+    .content-card {
+      padding: 1.5rem;
+      border: 1px solid #e5e0d8;
+      border-radius: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .content-card h3 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      margin-bottom: 0.35rem;
+    }
+    .content-card p {
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.55;
+    }
+
+    /* ---- Table ---- */
+    .home-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .home-table th {
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1.2em;
+      background: var(--tadpole-color);
+      color: #fff;
+      text-align: left;
+    }
+    .home-table td {
+      font-weight: 400;
+      font-size: 0.9rem;
+      padding: 1.2em;
+      border-bottom: 1px solid #e5e0d8;
+      line-height: 1.5;
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: var(--code-font);
+      background: #1a1a1a;
+      color: #e0e0e0;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #d9413e; }
+    .code-block .str { color: #4ec9b0; }
+    .code-block .comment { color: #6a9955; font-style: italic; }
+
+    /* ---- JetBrains Mono showcase ---- */
+    .jetbrains-weights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .jetbrains-weights .item {
+      font-family: var(--code-font);
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+    .jetbrains-weights .label {
+      font-family: var(--main-font);
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      margin-bottom: 0.1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">SKIPPIT</div>
+  <div class="page-subtitle">Font Scheme — Barcelona-UB iGEM 2025 &middot; Inter Variable + JetBrains Mono</div>
+
+  <!-- ==================== INTER ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Inter Variable</div>
+    <div class="section-note">Self-hosted variable font (inter-variablefont-opsz-wght.ttf). Full 100–900 weight range + italic. Used for all text: body, headings, navigation, UI.</div>
+
+    <div style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.75rem;">Weight Spectrum (100 → 900)</div>
+    <div class="weight-spectrum">
+      <div><div class="label">Thin 100</div><div class="item" style="font-weight:100;">Inter Variable</div></div>
+      <div><div class="label">ExtraLight 200</div><div class="item" style="font-weight:200;">Inter Variable</div></div>
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">Inter Variable</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">Inter Variable</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">Inter Variable</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">Inter Variable</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">Inter Variable</div></div>
+      <div><div class="label">ExtraBold 800</div><div class="item" style="font-weight:800;">Inter Variable</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">Inter Variable</div></div>
+    </div>
+
+    <div class="italic-row">
+      <div><div class="label">Thin 100 Italic</div><div class="item" style="font-weight:100;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400 Italic</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600 Italic</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700 Italic</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADING ==================== -->
+  <section>
+    <div class="section-label">Headings — Inter in SKIPPIT's Visual Hierarchy</div>
+    <div class="section-note">Replicating the home page typography: hero text, page titles, section headings with bold/italic/highlight patterns.</div>
+
+    <div class="hero-heading">Unlock protein<br>expression beyond<br>the limits of DNA</div>
+    <p style="font-size:0.8rem;color:#888;margin-bottom:1.5rem;">— hero h1 (800 weight, tight line-height)</p>
+
+    <div class="page-title-style">THE FIRST STEP: Rewiring RNA</div>
+    <p style="font-size:0.8rem;color:#888;margin-bottom:1.5rem;">— .page-title (800 weight, uppercase, #d9413e)</p>
+
+    <div class="section-h2">Proteins are the gears of life</div>
+    <p style="font-size:0.8rem;color:#888;margin-bottom:1rem;">— h2 (700 weight, 2rem)</p>
+
+    <div class="section-h3">TADPOLE is an easy-to-use software with a public interface that automates the design of RNA switches</div>
+    <p style="font-size:0.8rem;color:#888;margin-bottom:1rem;">— h3 (600 weight, 1.4rem, #d9413e)</p>
+
+    <p style="font-weight:400;font-size:1.05rem;max-width:72ch;">RNA switches are highly diverse small RNA sequences that can have catalytic or regulatory activity. <span class="bold-word">SKIPPIT</span> harnesses the power of Functional RNA elements (FRE) by fusing them with conformational RNA elements (CRE), to create new RNA switches.</p>
+    <p style="font-size:0.8rem;color:#888;margin-top:0.25rem;">— body text with <code>.bold-word</code> (800 weight, teal bg) and <code>.highlight-word</code> (700 weight, red)</p>
+
+    <p style="font-weight:400;font-size:1.05rem;margin-top:1rem;"><span class="italic-word">"With TADPOLE, the world of translation level regulation becomes a reality."</span></p>
+    <p style="font-size:0.8rem;color:#888;">— <code>.italic-word</code> (400 italic)</p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — Inter Regular 400</div>
+    <div class="section-note">Clean, highly legible at all sizes. Inter's tall x-height and open apertures make it excellent for long-form reading.</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== HOME TABLE ==================== -->
+  <section>
+    <div class="section-label">Content Table — Inter in Data Presentation</div>
+    <div class="section-note">Replicating SKIPPIT's FRE/CRE comparison table: bold th in Inter 700, body td in Inter 400.</div>
+    <table class="home-table">
+      <tr>
+        <th>Functional RNA elements (FRE)</th>
+        <th>Conformational RNA elements (CRE)</th>
+      </tr>
+      <tr>
+        <td>RNA sequences which possess additional properties that rely on their secondary structure to function.</td>
+        <td>RNA sequences that have the ability to bind and interact with a ligand or an external stimuli to change their structure.</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Inter Medium / SemiBold</div>
+    <div class="section-note">SKIPPIT's navbar uses Inter at 500–600 weight for clean, modern navigation.</div>
+    <div class="nav-sample">
+      <span class="nav-logo">SKIPPIT</span>
+      <span class="nav-item dropdown-toggle">Project ▾</span>
+      <span class="nav-item dropdown-toggle">Wet Lab ▾</span>
+      <span class="nav-item dropdown-toggle">Dry Lab ▾</span>
+      <span class="nav-item dropdown-toggle">Beyond the Bench ▾</span>
+      <span class="nav-item dropdown-toggle">Team ▾</span>
+      <span class="nav-item">Awards</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-sample" style="margin-top:1rem;">
+      <div>
+        <div class="fw-bold">Pages</div>
+        <a>Home</a><a>Description</a><a>Parts</a><a>Software</a><a>Education</a><a>Team</a>
+      </div>
+      <div>
+        <div class="fw-bold">Socials</div>
+        <a>Instagram</a><a>LinkedIn</a><a>Email</a>
+      </div>
+      <div>
+        <div class="fw-bold">Legal</div>
+        <a style="font-size:0.8rem;">CC BY 4.0 License</a>
+        <a style="font-size:0.8rem;">GitLab Repository</a>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#888;margin-top:0.5rem;">— Footer uses Inter 700 for section titles, 400 for links</p>
+  </section>
+
+  <!-- ==================== JETBRAINS MONO ==================== -->
+  <section>
+    <div class="section-label">Code Font — JetBrains Mono</div>
+    <div class="section-note">Self-hosted as jetbrainsmono-regular.ttf (400). A developer-friendly monospace with ligatures and clear character differentiation.</div>
+
+    <div class="jetbrains-weights">
+      <div><div class="label">Regular 400</div><div class="item">The quick brown fox // 0123456789</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox // 0123456789</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox // 0123456789</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox // 0123456789</div></div>
+    </div>
+    <div class="italic-row">
+      <div><div class="label">Regular 400 Italic</div><div class="item" style="font-family:var(--code-font);">The quick brown fox // sequence_analysis()</div></div>
+      <div><div class="label">Medium 500 Italic</div><div class="item" style="font-family:var(--code-font);font-weight:500;">The quick brown fox // sequence_analysis()</div></div>
+    </div>
+
+    <div class="code-block" style="margin-top:1rem;">
+<span class="comment"># TADPOLE: RNA switch design automation</span>
+<span class="kw">def</span> <span style="color:#dcdcaa;">design_switch</span>(<span style="color:#9cdcfe;">cre_seq</span>: <span style="color:#4ec9b0;">str</span>, <span style="color:#9cdcfe;">fre_seq</span>: <span style="color:#4ec9b0;">str</span>) -> <span style="color:#4ec9b0;">dict</span>:
+    <span class="comment"># Compute optimal linker and scaffold</span>
+    <span style="color:#569cd6;">result</span> = <span style="color:#dcdcaa;">tadpole_engine</span>(cre_seq, fre_seq)
+    <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    <span class="kw">return</span> <span style="color:#569cd6;">result</span>
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">Clean, minimal two-font system using variable fonts for maximum flexibility.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);margin-bottom:0.5rem;">Font Loading</div>
+        <div style="color:#444;line-height:2;font-size:0.9rem;">
+          <strong>Inter</strong> — Variable .ttf (100–900)<br>
+          <strong>Inter Italic</strong> — Variable .ttf (100–900)<br>
+          <strong>JetBrains Mono</strong> — Regular .ttf (400)<br>
+          <span style="color:#888;">All self-hosted, no CDN</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);margin-bottom:0.5rem;">Usage</div>
+        <div style="color:#444;line-height:2;font-size:0.9rem;">
+          --main-font → Inter (everything)<br>
+          --code-font → JetBrains Mono (code)<br>
+          <span style="color:#888;">2 CSS variables, 3 @font-face rules</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

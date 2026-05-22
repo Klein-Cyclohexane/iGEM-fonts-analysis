@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — Inter + Oswald</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      --heading-font: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --nav-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      --code-font: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Menlo', 'Courier New', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f8f9fa;
+      color: #1a1a2e;
+      font-family: var(--main-font);
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: var(--heading-font);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1b476a;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #5da1d8;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    .typeface-name {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    /* ---- Body Font: Inter ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 600; min-width: 1.2em; }
+    .alphabet-grid .row .lower { color: #6b7280; }
+
+    .numbers {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.5rem;
+      color: #374151;
+    }
+
+    .paragraph {
+      line-height: 1.75;
+      font-size: 1.05rem;
+      color: #1f2937;
+      font-weight: 400;
+    }
+
+    /* Weights showcase */
+    .weights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .weight-item {
+      font-size: 1.3rem;
+      color: #1f2937;
+    }
+    .weight-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #9ca3af;
+      margin-bottom: 0.15rem;
+    }
+
+    /* ---- Heading Font: Oswald ---- */
+    .heading-sample {
+      font-family: var(--heading-font);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #1b476a;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+    }
+
+    /* ---- Nav Font: System Stack ---- */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-family: var(--nav-font);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #000000cc;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .nav-bar .nav-item { cursor: default; transition: color 0.2s; }
+    .nav-bar .nav-item:hover { color: #1b476a; }
+    .nav-bar .nav-active {
+      color: #fff;
+      background: linear-gradient(135deg, #1b476a, #5da1d8);
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+    }
+    .nav-bar .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1b476a;
+      margin-right: auto;
+    }
+
+    /* ---- Code Font ---- */
+    .code-block {
+      font-family: var(--code-font);
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #cba6f7; }
+    .code-block .str { color: #a6e3a1; }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <h1>Font Samples</h1>
+  <h2>MSP Maastricht 2025 iGEM Wiki</h2>
+
+  <!-- ==================== BODY FONT ==================== -->
+  <section>
+    <div class="section-label">Body Font — <span class="typeface-name">Inter</span></div>
+
+    <div class="weights">
+      <div>
+        <div class="weight-label">Light 300</div>
+        <div class="weight-item" style="font-weight:300;">The quick brown fox</div>
+      </div>
+      <div>
+        <div class="weight-label">Regular 400</div>
+        <div class="weight-item" style="font-weight:400;">The quick brown fox</div>
+      </div>
+      <div>
+        <div class="weight-label">Medium 500</div>
+        <div class="weight-item" style="font-weight:500;">The quick brown fox</div>
+      </div>
+      <div>
+        <div class="weight-label">Semibold 600</div>
+        <div class="weight-item" style="font-weight:600;">The quick brown fox</div>
+      </div>
+      <div>
+        <div class="weight-label">Bold 700</div>
+        <div class="weight-item" style="font-weight:700;">The quick brown fox</div>
+      </div>
+    </div>
+
+    <p style="font-size:0.8rem;color:#9ca3af;margin-bottom:1rem;">Alphabet (upper &amp; lowercase)</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-size:0.8rem;color:#9ca3af;margin-bottom:1rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-size:0.8rem;color:#9ca3af;margin-bottom:1rem;">Paragraph sample</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== HEADING FONT ==================== -->
+  <section>
+    <div class="section-label">Heading Font — <span class="typeface-name">Oswald</span></div>
+    <div class="heading-sample">iGEM2026 SHTU</div>
+    <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:1.5rem 3rem;">
+      <div>
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:#9ca3af;margin-bottom:0.25rem;">Light 300</div>
+        <div style="font-family:var(--heading-font);font-weight:300;font-size:2rem;">iGEM2026</div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:#9ca3af;margin-bottom:0.25rem;">Regular 400</div>
+        <div style="font-family:var(--heading-font);font-weight:400;font-size:2rem;">iGEM2026</div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:#9ca3af;margin-bottom:0.25rem;">Medium 500</div>
+        <div style="font-family:var(--heading-font);font-weight:500;font-size:2rem;">iGEM2026</div>
+      </div>
+      <div>
+        <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:#9ca3af;margin-bottom:0.25rem;">Bold 700</div>
+        <div style="font-family:var(--heading-font);font-weight:700;font-size:2rem;">iGEM2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAV FONT ==================== -->
+  <section>
+    <div class="section-label">Navigation Font — <span class="typeface-name">System UI Stack</span></div>
+    <div class="nav-bar">
+      <span class="nav-logo">CoreSpin</span>
+      <span class="nav-active">Home</span>
+      <span class="nav-item">Project</span>
+      <span class="nav-item">Team</span>
+      <span class="nav-item">Parts</span>
+      <span class="nav-item">Safety</span>
+      <span class="nav-item">Human Practices</span>
+      <span class="nav-item">Awards</span>
+      <span class="nav-item">🔍</span>
+    </div>
+    <p style="margin-top:1rem; font-size:0.85rem; color:#6b7280;">
+      Fallback stack: <code style="font-size:0.8rem;">-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif</code>
+    </p>
+  </section>
+
+  <!-- ==================== CODE FONT ==================== -->
+  <section>
+    <div class="section-label">Code Font — <span class="typeface-name">Monospace</span></div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — ShanghaiTech China iGEM 2023</title>
+  <style>
+    @font-face {
+      font-family: 'Arlon';
+      src: url('https://static.igem.wiki/teams/4594/wiki/arlonfont.otf') format('opentype');
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'AlibabaPuHuiTi';
+      src: url('https://static.igem.wiki/teams/4594/wiki/alibabafont.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+
+    :root {
+      --font-heading: 'Arlon', sans-serif;
+      --font-body: 'AlibabaPuHuiTi', sans-serif;
+      --color-bg: #0a0a0a;
+      --color-text: #F8F0E8;
+      --color-accent: #F8F0E8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: #999;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-family: var(--font-body);
+    }
+
+    section {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight display ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.2rem;
+      color: var(--color-text);
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Heading ---- */
+    .hero-heading {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 2.5rem;
+      color: var(--color-text);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .section-h2 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 800; }
+    .alphabet-grid .row .lower { color: #888; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: #ccc;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      color: #ddd;
+      max-width: 72ch;
+    }
+
+    /* ---- Nav sample ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: var(--color-text);
+      padding: 0.6rem 0;
+      border-bottom: 2px solid rgba(248,240,232,0.3);
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: 'Courier New', Courier, monospace;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #f8f0e8; }
+    .code-block .str { color: #a5d6a7; }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">iGEM 2026 SHTU</div>
+  <div class="page-subtitle">Font Scheme — ShanghaiTech China iGEM 2023 &middot; Arlon + AlibabaPuHuiTi</div>
+
+  <!-- ==================== ARLON ==================== -->
+  <section>
+    <div class="section-label">Heading Font — Arlon</div>
+    <div class="section-note">Self-hosted .otf display font. Semi-bold (600). Used for main titles, section subtitles, and hero display text.</div>
+
+    <div class="weight-row">
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-family:Arlon,sans-serif;font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+    <div style="font-size:0.8rem;color:#888;margin-top:-0.5rem;margin-bottom:1.25rem;">Arlon appears to be a single-weight display font (600).</div>
+  </section>
+
+  <!-- ==================== HEADING ==================== -->
+  <section>
+    <div class="section-label">Headings — Arlon SemiBold</div>
+    <div class="hero-heading">iGEM 2026 SHTU</div>
+    <p style="color:#888;margin-bottom:1.5rem;">— 600 weight, display sans-serif, bold and impactful</p>
+
+    <div class="section-h2">Project Description</div>
+    <p style="color:#999;max-width:72ch;margin-bottom:1.5rem;">
+      Our project develops a biodegradable solution for sustainable products through synthetic biology approaches, combining PETase and MHETase enzymes for efficient plastic degradation.
+    </p>
+
+    <div class="section-h2">Experimental Design</div>
+    <p style="color:#999;max-width:72ch;">
+      We engineered E. coli to express and secrete plastic-degrading enzymes, creating a self-sustaining system for PET breakdown into reusable monomers.
+    </p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — AlibabaPuHuiTi Regular 400</div>
+    <div class="section-note">Self-hosted .ttf Chinese font (阿里巴巴普惠体). Used for all body text, general content, and UI elements. A clean, modern sans-serif designed for both Chinese and Latin scripts.</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+
+    <p style="font-weight:700;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#999;margin-bottom:0.5rem;margin-top:1.5rem;">Chinese Paragraph</p>
+    <p class="paragraph">
+      在合成生物学领域，基因回路的设计通常涉及建模、组装和测试的迭代循环。字体的选择与基因调控的复杂性相比似乎微不足道，但它在有效传达研究成果方面起着至关重要的作用。iGEM Wiki 的评委和访客会花大量时间阅读你的项目描述、实验和结论。因此，选择高度可读的字体可以确保你的辛勤工作以最易访问的方式呈现，减少认知负担并提高整体理解力。
+    </p>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — AlibabaPuHuiTi Regular</div>
+    <div class="section-note">Nav links use AlibabaPuHuiTi at 400 weight, 25px size. Dark background with cream-colored text (#F8F0E8).</div>
+    <div class="nav-sample">
+      <span>Home</span>
+      <span>Project ▾</span>
+      <span>Team ▾</span>
+      <span>Safety</span>
+      <span>Human Practices</span>
+      <span>Awards</span>
+    </div>
+    <p style="font-size:0.8rem;color:#888;margin-top:0.75rem;">— Font size: 25px, color: #F8F0E8, background: rgba(0,0,0,0.2) with backdrop-filter blur</p>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — Courier New, Courier, monospace</div>
+    <div class="section-note">The wiki uses the class .pff for monospace text, set to 'Courier New', Courier, monospace.</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">ShanghaiTech China 2023 uses a two-font system: Arlon for headings and AlibabaPuHuiTi for body/navigation. Both fonts are self-hosted on the iGEM CDN.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-accent);margin-bottom:0.5rem;">Font Loading</div>
+        <div style="color:#999;line-height:2;font-size:0.9rem;">
+          <strong>Arlon</strong> — 1 .otf file<br>
+          SemiBold (600)<br>
+          Display / Heading font<br>
+          <br>
+          <strong>AlibabaPuHuiTi</strong> — 1 .ttf file<br>
+          Regular (400)<br>
+          Chinese + Latin script support<br>
+          <br>
+          <strong>Courier New</strong> — system font<br>
+          Monospace code text
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-accent);margin-bottom:0.5rem;">Notable Features</div>
+        <div style="color:#999;line-height:2;font-size:0.9rem;">
+          Two-font system (Arlon + AlibabaPuHuiTi)<br>
+          Dark background design<br>
+          Chinese body text support<br>
+          Arlon: bold display font<br>
+          AlibabaPuHuiTi: 阿里巴巴普惠体<br>
+          All self-hosted on iGEM CDN
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

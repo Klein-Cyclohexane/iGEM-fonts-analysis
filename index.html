@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iGEM Wiki 字体方案总览 | 按角色分类</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bitter:ital,wght@0,400;0,600;0,700&family=Exo+2:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Fira+Code:wght@400;500;600&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,500;0,700&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700&family=Figtree:ital,wght@0,400;0,500;0,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:ital,wght@0,400;0,500;0,700&family=Noto+Serif:ital,wght@0,400;0,500;0,700;0,800&family=Onest:wght@400;500;600;800&family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;500;700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,400;0,500;0,700&family=Roboto:ital,wght@0,400;0,500;0,700&display=swap" rel="stylesheet">
+  <!-- Self-hosted fonts (iGEM CDN) -->
+  <style>
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-thin-13.otf') format('opentype');
+      font-weight: 100; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-light-11.otf') format('opentype');
+      font-weight: 300; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-regular-3.otf') format('opentype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-medium-2.otf') format('opentype');
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Gilroy';
+      src: url('https://static.igem.wiki/teams/5553/fonts/gilroy/gilroy-bold-4.otf') format('opentype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Arlon';
+      src: url('https://static.igem.wiki/teams/4594/wiki/arlonfont.otf') format('opentype');
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'AlibabaPuHuiTi';
+      src: url('https://static.igem.wiki/teams/4594/wiki/alibabafont.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+  </style>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --card-bg: #fff;
+      --text: #1a1a2e;
+      --muted: #868e96;
+      --border: #dee2e6;
+      --accent: #4a6cf7;
+      --accent-h: #3b5de7;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* ==== HERO ==== */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,0.65); margin-top: 0.5rem; }
+
+    /* ==== NAV (sticky) ==== */
+    .section-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .section-nav a {
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .section-nav a:hover { color: var(--text); }
+    .section-nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ==== SECTION ==== */
+    .role-section {
+      padding: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .role-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 0.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--accent);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .role-title .count {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .role-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==== FONT CARD ==== */
+    .font-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.25rem;
+    }
+    .font-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+    .font-card-header {
+      padding: 0.6rem 1rem;
+      background: #fafbfc;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .font-card-header .font-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .font-card-header .wikis {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: right;
+      line-height: 1.3;
+    }
+    .font-card-header .wikis a {
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .font-card-header .wikis a:hover { text-decoration: underline; }
+    .font-card-body { padding: 1rem; }
+
+    /* ==== SAMPLE TYPES ==== */
+    .sample-block { margin-bottom: 1rem; }
+    .sample-block:last-child { margin-bottom: 0; }
+    .sample-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .sample-label .tag {
+      display: inline-block;
+      background: #e8f0fe;
+      color: var(--accent);
+      padding: 0.05rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.6rem;
+      margin-left: 0.3rem;
+    }
+
+    /* alphabet */
+    .alpha-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem 0.7rem;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+    .alpha-row .pair { white-space: nowrap; }
+    .alpha-row .pair .up { font-weight: 700; }
+    .alpha-row .pair .lo { color: var(--muted); }
+
+    /* numerals */
+    .numeral-row {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* heading display */
+    .heading-display {
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+    }
+
+    /* nav sample */
+    .nav-sample-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #333;
+    }
+    .nav-sample-row span {
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* body paragraph */
+    .body-paragraph {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #333;
+      max-width: 68ch;
+    }
+
+    /* code block */
+    .code-sample {
+      font-size: 0.8rem;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .code-sample .kw { color: #cba6f7; }
+    .code-sample .str { color: #a6e3a1; }
+
+    /* ==== FOOTER ==== */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 480px) {
+      .role-section { padding: 1rem; }
+      .font-grid { grid-template-columns: 1fr; }
+      .heading-display { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>iGEM Wiki Fonts Summary</h1>
+</div>
+
+<nav class="section-nav" id="topNav">
+  <a href="#heading" class="active">标题 Heading</a>
+  <a href="#nav">导航栏 Nav</a>
+  <a href="#body">正文 Body</a>
+  <a href="#code">代码 Code</a>
+</nav>
+
+<!-- ================================================================================== -->
+<!-- HEADING FONTS -->
+<!-- ================================================================================== -->
+<section class="role-section" id="heading">
+  <div class="role-title">标题字体 <span class="count">12 种字体</span></div>
+
+  <div class="font-grid">
+
+    <!-- Oswald -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Oswald</span>
+        <span class="wikis"><a href="2025-MSP-Maastricht.html">MSP Maastricht · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:Oswald,sans-serif;font-weight:700;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:Oswald,sans-serif;font-size:1.1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anton -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Anton</span>
+        <span class="wikis"><a href="2025-EPFL.html">EPFL · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例 <span class="tag">全大写</span></div>
+          <div class="heading-display" style="font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:2px;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:Anton,sans-serif;font-size:1.1rem;">Regular 400 (单一字重)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outfit -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Outfit</span>
+        <span class="wikis"><a href="2025-EPFL.html">EPFL · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:Outfit,sans-serif;font-weight:700;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示 <span class="tag">Variable 100–900</span></div>
+          <div style="font-family:Outfit,sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exo 2 -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Exo 2</span>
+        <span class="wikis"><a href="2024-Heidelberg.html">Heidelberg · 2024</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:'Exo 2',sans-serif;font-weight:700;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示 <span class="tag">100–900</span></div>
+          <div style="font-family:'Exo 2',sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poppins -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Poppins</span>
+        <span class="wikis"><a href="2024-JU-Krakow.html">JU Krakow · 2024</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:Poppins,sans-serif;font-weight:700;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:Poppins,sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fira Sans -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Fira Sans</span>
+        <span class="wikis"><a href="2022-INSA-Lyon1.html">INSA Lyon1 · 2022</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:'Fira Sans',sans-serif;font-weight:700;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:'Fira Sans',sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Abril Fatface -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Abril Fatface</span>
+        <span class="wikis"><a href="2022-Patras-Medicine.html">Patras Medicine · 2022</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例 <span class="tag">衬线</span></div>
+          <div class="heading-display" style="font-family:'Abril Fatface',cursive;font-weight:400;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:'Abril Fatface',cursive;font-size:1rem;">Regular 400 (单一字重)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inter -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Inter</span>
+        <span class="wikis">
+          <a href="2025-Barcelona-UB.html">Barcelona-UB</a> · <a href="2025-PekingHSC.html">PekingHSC</a> · 2025
+        </span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:Inter,sans-serif;font-weight:800;letter-spacing:-0.02em;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示 <span class="tag">Variable 100–900</span></div>
+          <div style="font-family:Inter,sans-serif;font-size:0.95rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onest -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Onest</span>
+        <span class="wikis"><a href="2025-McGill.html">McGill · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例</div>
+          <div class="heading-display" style="font-family:Onest,sans-serif;font-weight:800;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:Onest,sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noto Serif VF -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Noto Serif</span>
+        <span class="wikis"><a href="2025-Patras-Med.html">Patras Med · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例 <span class="tag">衬线</span></div>
+          <div class="heading-display" style="font-family:'Noto Serif',serif;font-weight:800;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示 <span class="tag">Variable 100–900</span></div>
+          <div style="font-family:'Noto Serif',serif;font-size:0.95rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gilroy -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Gilroy</span>
+        <span class="wikis"><a href="2025-ShanghaiTech-China.html">ShanghaiTech China · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例 <span class="tag">几何无衬线</span></div>
+          <div class="heading-display" style="font-family:Gilroy,sans-serif;font-weight:900;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示 <span class="tag">100–950 · 13 个 .otf</span></div>
+          <div style="font-family:Gilroy,sans-serif;font-size:1rem;">
+            <span style="font-weight:100;">Thin</span>
+            <span style="font-weight:300;">&middot; Light</span>
+            <span style="font-weight:400;">&middot; Regular</span>
+            <span style="font-weight:500;">&middot; Medium</span>
+            <span style="font-weight:700;">&middot; Bold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arlon -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Arlon</span>
+        <span class="wikis"><a href="2023-ShanghaiTech-China.html">ShanghaiTech China · 2023</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">标题样例 <span class="tag">展示字体</span></div>
+          <div class="heading-display" style="font-family:Arlon,sans-serif;font-weight:600;">iGEM 2026 SHTU</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">字重展示</div>
+          <div style="font-family:Arlon,sans-serif;font-size:1rem;">SemiBold 600 (单一字重 · 展示字体)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================================================================================== -->
+<section class="role-section" id="nav">
+  <div class="role-title">导航栏字体 <span class="count">9 种方案</span></div>
+
+  <div class="font-grid">
+
+    <!-- System UI Stack -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">系统 UI 栈</span>
+        <span class="wikis"><a href="2025-MSP-Maastricht.html">MSP Maastricht · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">Fallback: -apple-system, BlinkMacSystemFont, Segoe UI</span></div>
+          <div class="nav-sample-row" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+            <span>Home</span><span>Project</span><span>Team</span><span>Parts</span><span>Safety</span><span>Human Practices</span><span>Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inter -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Inter</span>
+        <span class="wikis">
+          <a href="2025-EPFL.html">EPFL</a> · <a href="2025-Barcelona-UB.html">Barcelona-UB</a> · <a href="2025-PekingHSC.html">PekingHSC</a>
+        </span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">500–600 字重</span></div>
+          <div class="nav-sample-row" style="font-family:Inter,sans-serif;font-weight:500;">
+            <span>Home</span><span>Project</span><span>Team</span><span>Parts</span><span>Safety</span><span>Human Practices</span><span>Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poppins -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Poppins</span>
+        <span class="wikis"><a href="2024-JU-Krakow.html">JU Krakow · 2024</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">全大写 · 500–700 字重</span></div>
+          <div class="nav-sample-row" style="font-family:Poppins,sans-serif;font-weight:600;text-transform:uppercase;font-size:0.8rem;">
+            <span>Home</span><span>Project ▾</span><span>Wet Lab ▾</span><span>Dry Lab ▾</span><span>Activities ▾</span><span>Grand Jamboree</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exo 2 -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Exo 2</span>
+        <span class="wikis"><a href="2024-Heidelberg.html">Heidelberg · 2024</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接</div>
+          <div class="nav-sample-row" style="font-family:'Exo 2',sans-serif;font-weight:500;">
+            <span>Home</span><span>Project ▾</span><span>Team</span><span>Results ▾</span><span>Human Practices ▾</span><span>Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fira Sans Bold -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Fira Sans Bold</span>
+        <span class="wikis">
+          <a href="2022-INSA-Lyon1.html">INSA Lyon1</a> · <a href="2022-Patras-Medicine.html">Patras Medicine</a> · 2022
+        </span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">Bold · x-large</span></div>
+          <div class="nav-sample-row" style="font-family:'Fira Sans',sans-serif;font-weight:700;font-size:1rem;">
+            <span>Home</span><span>Project ▾</span><span>Team</span><span>Results ▾</span><span>Human Practices ▾</span><span>Relations ▾</span><span>Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onest -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Onest</span>
+        <span class="wikis"><a href="2025-McGill.html">McGill · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航药丸按钮 <span class="tag">500 字重 · #ffc66a 背景</span></div>
+          <div class="nav-sample-row" style="font-family:Onest,sans-serif;font-weight:500;">
+            <span style="background:#ffc66a;color:#374d82;">Home</span>
+            <span style="background:#ffc66a;color:#374d82;">Project ▾</span>
+            <span style="background:#ffc66a;color:#374d82;">Wet Lab ▾</span>
+            <span style="background:#ffc66a;color:#374d82;">Dry Lab ▾</span>
+            <span style="background:#ffc66a;color:#374d82;">Team ▾</span>
+            <span style="background:#ffc66a;color:#374d82;">Awards</span>
+          </div>
+        </div>
+        <div class="sample-block" style="margin-top:0.75rem;">
+          <div class="sample-label">气泡标签 — Open Sans 600</div>
+          <div class="nav-sample-row" style="font-family:'Open Sans',sans-serif;font-weight:600;font-size:0.78rem;">
+            <span>Description</span><span>Experiments</span><span>Model</span><span>Engagement</span><span>Members</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noto Serif VF -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Noto Serif</span>
+        <span class="wikis"><a href="2025-Patras-Med.html">Patras Med · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">唯一衬线体导航 · 全大写</span></div>
+          <div class="nav-sample-row" style="font-family:'Noto Serif',serif;font-weight:500;text-transform:uppercase;font-size:0.78rem;">
+            <span style="color:#000;">Home</span>
+            <span style="color:#000;">Team ▾</span>
+            <span style="color:#000;">Project ▾</span>
+            <span style="color:#000;">Wet Lab ▾</span>
+            <span style="color:#000;">Dry Lab ▾</span>
+            <span style="color:#000;">Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gilroy -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Gilroy</span>
+        <span class="wikis"><a href="2025-ShanghaiTech-China.html">ShanghaiTech China · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">500–700 字重</span></div>
+          <div class="nav-sample-row" style="font-family:Gilroy,sans-serif;font-weight:500;">
+            <span>Home</span><span>Project ▾</span><span>Wet Lab ▾</span><span>Dry Lab ▾</span><span>Human Practices ▾</span><span>Team ▾</span><span>Awards</span>
+          </div>
+        </div>
+        <div class="sample-block" style="margin-top:0.75rem;">
+          <div class="sample-label">字体大小切换 <span class="tag">无障碍功能</span></div>
+          <div class="nav-sample-row" style="font-family:Gilroy,sans-serif;">
+            <span style="font-weight:500;font-size:0.75rem;">Small</span>
+            <span style="font-weight:500;font-size:0.9rem;">Medium</span>
+            <span style="font-weight:600;font-size:1.05rem;">Large</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AlibabaPuHuiTi -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">AlibabaPuHuiTi</span>
+        <span class="wikis"><a href="2023-ShanghaiTech-China.html">ShanghaiTech China · 2023</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">导航链接 <span class="tag">中文无衬线 · 25px · 深色背景</span></div>
+          <div class="nav-sample-row" style="font-family:AlibabaPuHuiTi,sans-serif;font-weight:400;font-size:1rem;background:#0a0a0a;padding:0.5rem;border-radius:8px;">
+            <span style="color:#F8F0E8;">Home</span>
+            <span style="color:#F8F0E8;">Project ▾</span>
+            <span style="color:#F8F0E8;">Team ▾</span>
+            <span style="color:#F8F0E8;">Safety</span>
+            <span style="color:#F8F0E8;">Human Practices</span>
+            <span style="color:#F8F0E8;">Awards</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================================================================================== -->
+<section class="role-section" id="body">
+  <div class="role-title">正文字体 <span class="count">10 种字体</span></div>
+
+  <div class="font-grid">
+
+    <!-- Inter -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Inter</span>
+        <span class="wikis">
+          <a href="2025-MSP-Maastricht.html">MSP Maastricht</a> · <a href="2025-EPFL.html">EPFL</a> · <a href="2025-Barcelona-UB.html">Barcelona-UB</a> · <a href="2025-PekingHSC.html">PekingHSC</a>
+        </span>
+      </div>
+      <div class="font-card-body" style="font-family:Inter,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表 <span class="tag">4 个 Wiki 使用</span></div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落 <span class="tag">#1 最受欢迎正文字体</span></div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roboto -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Roboto</span>
+        <span class="wikis"><a href="2025-EPFL.html">EPFL · 2025</a> (备选正文)</span>
+      </div>
+      <div class="font-card-body" style="font-family:Roboto,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exo 2 -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Exo 2</span>
+        <span class="wikis"><a href="2024-Heidelberg.html">Heidelberg · 2024</a></span>
+      </div>
+      <div class="font-card-body" style="font-family:'Exo 2',sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poppins -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Poppins</span>
+        <span class="wikis"><a href="2024-JU-Krakow.html">JU Krakow · 2024</a></span>
+      </div>
+      <div class="font-card-body" style="font-family:Poppins,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fira Sans -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Fira Sans</span>
+        <span class="wikis"><a href="2022-INSA-Lyon1.html">INSA Lyon1 · 2022</a></span>
+      </div>
+      <div class="font-card-body" style="font-family:'Fira Sans',sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Figtree -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Figtree</span>
+        <span class="wikis"><a href="2022-Patras-Medicine.html">Patras Medicine · 2022</a></span>
+      </div>
+      <div class="font-card-body" style="font-family:Figtree,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Onest -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Onest</span>
+        <span class="wikis"><a href="2025-McGill.html">McGill · 2025</a></span>
+      </div>
+      <div class="font-card-body" style="font-family:Onest,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表</div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落</div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Noto Serif -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Noto Serif</span>
+        <span class="wikis"><a href="2025-Patras-Med.html">Patras Med · 2025</a> <span class="tag" style="margin-left:0.3rem;">唯一衬线正文</span></span>
+      </div>
+      <div class="font-card-body" style="font-family:'Noto Serif',serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表 <span class="tag">衬线体</span></div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span>
+            <span class="pair"><span class="up">B</span><span class="lo">b</span></span>
+            <span class="pair"><span class="up">C</span><span class="lo">c</span></span>
+            <span class="pair"><span class="up">D</span><span class="lo">d</span></span>
+            <span class="pair"><span class="up">E</span><span class="lo">e</span></span>
+            <span class="pair"><span class="up">F</span><span class="lo">f</span></span>
+            <span class="pair"><span class="up">G</span><span class="lo">g</span></span>
+            <span class="pair"><span class="up">H</span><span class="lo">h</span></span>
+            <span class="pair"><span class="up">I</span><span class="lo">i</span></span>
+            <span class="pair"><span class="up">J</span><span class="lo">j</span></span>
+            <span class="pair"><span class="up">K</span><span class="lo">k</span></span>
+            <span class="pair"><span class="up">L</span><span class="lo">l</span></span>
+            <span class="pair"><span class="up">M</span><span class="lo">m</span></span>
+            <span class="pair"><span class="up">N</span><span class="lo">n</span></span>
+            <span class="pair"><span class="up">O</span><span class="lo">o</span></span>
+            <span class="pair"><span class="up">P</span><span class="lo">p</span></span>
+            <span class="pair"><span class="up">Q</span><span class="lo">q</span></span>
+            <span class="pair"><span class="up">R</span><span class="lo">r</span></span>
+            <span class="pair"><span class="up">S</span><span class="lo">s</span></span>
+            <span class="pair"><span class="up">T</span><span class="lo">t</span></span>
+            <span class="pair"><span class="up">U</span><span class="lo">u</span></span>
+            <span class="pair"><span class="up">V</span><span class="lo">v</span></span>
+            <span class="pair"><span class="up">W</span><span class="lo">w</span></span>
+            <span class="pair"><span class="up">X</span><span class="lo">x</span></span>
+            <span class="pair"><span class="up">Y</span><span class="lo">y</span></span>
+            <span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落 <span class="tag">唯一衬线正文 — 学术感最强</span></div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gilroy -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Gilroy</span>
+        <span class="wikis"><a href="2025-ShanghaiTech-China.html">ShanghaiTech China · 2025</a> <span class="tag" style="margin-left:0.3rem;">几何无衬线</span></span>
+      </div>
+      <div class="font-card-body" style="font-family:Gilroy,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表 <span class="tag">几何无衬线 · 较宽</span></div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span><span class="pair"><span class="up">B</span><span class="lo">b</span></span><span class="pair"><span class="up">C</span><span class="lo">c</span></span><span class="pair"><span class="up">D</span><span class="lo">d</span></span><span class="pair"><span class="up">E</span><span class="lo">e</span></span><span class="pair"><span class="up">F</span><span class="lo">f</span></span><span class="pair"><span class="up">G</span><span class="lo">g</span></span><span class="pair"><span class="up">H</span><span class="lo">h</span></span><span class="pair"><span class="up">I</span><span class="lo">i</span></span><span class="pair"><span class="up">J</span><span class="lo">j</span></span><span class="pair"><span class="up">K</span><span class="lo">k</span></span><span class="pair"><span class="up">L</span><span class="lo">l</span></span><span class="pair"><span class="up">M</span><span class="lo">m</span></span><span class="pair"><span class="up">N</span><span class="lo">n</span></span><span class="pair"><span class="up">O</span><span class="lo">o</span></span><span class="pair"><span class="up">P</span><span class="lo">p</span></span><span class="pair"><span class="up">Q</span><span class="lo">q</span></span><span class="pair"><span class="up">R</span><span class="lo">r</span></span><span class="pair"><span class="up">S</span><span class="lo">s</span></span><span class="pair"><span class="up">T</span><span class="lo">t</span></span><span class="pair"><span class="up">U</span><span class="lo">u</span></span><span class="pair"><span class="up">V</span><span class="lo">v</span></span><span class="pair"><span class="up">W</span><span class="lo">w</span></span><span class="pair"><span class="up">X</span><span class="lo">x</span></span><span class="pair"><span class="up">Y</span><span class="lo">y</span></span><span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落 <span class="tag">13 个 .otf · 100–950 字重</span></div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AlibabaPuHuiTi -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">AlibabaPuHuiTi</span>
+        <span class="wikis"><a href="2023-ShanghaiTech-China.html">ShanghaiTech China · 2023</a> <span class="tag" style="margin-left:0.3rem;">中文无衬线</span></span>
+      </div>
+      <div class="font-card-body" style="font-family:AlibabaPuHuiTi,sans-serif;font-weight:400;">
+        <div class="sample-block">
+          <div class="sample-label">字母表 <span class="tag">中文无衬线体 · 阿里巴巴普惠体</span></div>
+          <div class="alpha-row">
+            <span class="pair"><span class="up">A</span><span class="lo">a</span></span><span class="pair"><span class="up">B</span><span class="lo">b</span></span><span class="pair"><span class="up">C</span><span class="lo">c</span></span><span class="pair"><span class="up">D</span><span class="lo">d</span></span><span class="pair"><span class="up">E</span><span class="lo">e</span></span><span class="pair"><span class="up">F</span><span class="lo">f</span></span><span class="pair"><span class="up">G</span><span class="lo">g</span></span><span class="pair"><span class="up">H</span><span class="lo">h</span></span><span class="pair"><span class="up">I</span><span class="lo">i</span></span><span class="pair"><span class="up">J</span><span class="lo">j</span></span><span class="pair"><span class="up">K</span><span class="lo">k</span></span><span class="pair"><span class="up">L</span><span class="lo">l</span></span><span class="pair"><span class="up">M</span><span class="lo">m</span></span><span class="pair"><span class="up">N</span><span class="lo">n</span></span><span class="pair"><span class="up">O</span><span class="lo">o</span></span><span class="pair"><span class="up">P</span><span class="lo">p</span></span><span class="pair"><span class="up">Q</span><span class="lo">q</span></span><span class="pair"><span class="up">R</span><span class="lo">r</span></span><span class="pair"><span class="up">S</span><span class="lo">s</span></span><span class="pair"><span class="up">T</span><span class="lo">t</span></span><span class="pair"><span class="up">U</span><span class="lo">u</span></span><span class="pair"><span class="up">V</span><span class="lo">v</span></span><span class="pair"><span class="up">W</span><span class="lo">w</span></span><span class="pair"><span class="up">X</span><span class="lo">x</span></span><span class="pair"><span class="up">Y</span><span class="lo">y</span></span><span class="pair"><span class="up">Z</span><span class="lo">z</span></span>
+          </div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">数字</div>
+          <div class="numeral-row">0 1 2 3 4 5 6 7 8 9</div>
+        </div>
+        <div class="sample-block">
+          <div class="sample-label">段落 <span class="tag">唯一支持中文的正文字体</span></div>
+          <div class="body-paragraph">
+            In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. 在合成生物学领域，基因回路的设计通常涉及建模、组装和测试的迭代循环。选择高度可读的字体可以确保你的研究以最易访问的方式呈现。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================================================================================== -->
+<section class="role-section" id="code">
+  <div class="role-title">代码字体 <span class="count">6 种方案</span></div>
+
+  <div class="font-grid">
+
+    <!-- System Mono Stack -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">System Mono 栈</span>
+        <span class="wikis">
+          EPFL · Heidelberg · Patras Med. 2022 · Patras Med 2025 &mdash; <strong>4 个 Wiki</strong>
+        </span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">SFMono / Menlo / Monaco / Consolas</span></div>
+          <div class="code-sample" style="font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Mono Stack -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Bootstrap Mono 栈</span>
+        <span class="wikis">
+          <a href="2024-JU-Krakow.html">JU Krakow</a> · <a href="2025-McGill.html">McGill</a>
+        </span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New</span></div>
+          <div class="code-sample" style="font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JetBrains Mono -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">JetBrains Mono</span>
+        <span class="wikis"><a href="2025-Barcelona-UB.html">Barcelona-UB · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">自托管 .ttf</span></div>
+          <div class="code-sample" style="font-family:'JetBrains Mono',monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fira Code -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Fira Code</span>
+        <span class="wikis"><a href="2025-PekingHSC.html">PekingHSC · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">自托管 .woff2 · 含编程连字</span></div>
+          <div class="code-sample" style="font-family:'Fira Code',monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courier -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">Courier</span>
+        <span class="wikis"><a href="2022-INSA-Lyon1.html">INSA Lyon1 · 2022</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">复古打字机风格</span></div>
+          <div class="code-sample" style="font-family:courier,'Courier New',monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- monospace generic -->
+    <div class="font-card">
+      <div class="font-card-header">
+        <span class="font-name">monospace (通用)</span>
+        <span class="wikis"><a href="2025-MSP-Maastricht.html">MSP Maastricht · 2025</a></span>
+      </div>
+      <div class="font-card-body">
+        <div class="sample-block">
+          <div class="sample-label">代码样例 <span class="tag">浏览器默认等宽字体</span></div>
+          <div class="code-sample" style="font-family:monospace;">
+            <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  const links = document.querySelectorAll('.section-nav a');
+  const sections = document.querySelectorAll('.role-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const id = entry.target.id;
+        const active = document.querySelector(`.section-nav a[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+})();
+</script>
+
+</body>
+</html>

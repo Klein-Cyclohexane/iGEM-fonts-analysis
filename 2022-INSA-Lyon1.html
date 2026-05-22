@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — INSA Lyon1 FIAT LUX 2022</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fira+Sans+Extra+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bs-font-sans-serif: 'Fira Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+      --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      --color-bg-hero: #E2F0E8;
+      --color-menu: #589F7D;
+      --color-dark: #0E0D0D;
+      --color-accent: #458D80;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f7f5;
+      color: var(--color-dark);
+      font-family: var(--bs-font-sans-serif);
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-weight: 700;
+      font-size: 3rem;
+      color: var(--color-menu);
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #dde8e0;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-menu);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #777;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight Row ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.3rem;
+      color: var(--color-dark);
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #888;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Hero heading ---- */
+    .hero-heading {
+      font-weight: 600;
+      font-size: 2.2rem;
+      color: var(--color-accent);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .glow-index {
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--color-dark);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    /* ---- Heading hierarchy ---- */
+    .section-h2 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--color-dark);
+      margin-bottom: 0.5rem;
+    }
+    .section-h3 {
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--color-menu);
+      margin-bottom: 0.25rem;
+    }
+    .section-h4 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--color-accent);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 600; }
+    .alphabet-grid .row .lower { color: #777; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: #444;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      color: var(--color-dark);
+      max-width: 72ch;
+    }
+
+    /* ---- Fira Sans Extra Condensed ---- */
+    .extra-condensed-row .item {
+      font-family: 'Fira Sans Extra Condensed', 'Fira Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--color-dark);
+      letter-spacing: 0.01em;
+    }
+
+    /* ---- Nav ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-weight: 700;
+      font-size: 1.15rem;
+      background: var(--color-menu);
+      padding: 0.6rem 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .nav-sample .nav-item {
+      color: #000;
+      cursor: default;
+      text-decoration: none;
+      transition: transform 0.2s, color 0.2s;
+    }
+    .nav-sample .nav-item:hover {
+      color: var(--color-accent);
+      transform: scale(1.2);
+    }
+    .nav-sample .nav-logo {
+      font-weight: 700;
+      margin-right: auto;
+    }
+
+    /* ---- Code (courier/monospace) ---- */
+    .code-block {
+      font-family: courier, 'Courier New', monospace;
+      background: #0E0D0D;
+      color: #E2F0E8;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.375rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #91C0AA; }
+    .code-block .str { color: #f5d76e; }
+
+    /* ---- Card (like .card-body) ---- */
+    .card-sample {
+      background: var(--color-bg-hero);
+      border: 1px solid #c8dcd0;
+      border-radius: 0.5rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-sample h3 {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--color-menu);
+      margin-bottom: 0.35rem;
+    }
+    .card-sample p {
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ---- Italic ---- */
+    .italic-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .italic-row .item {
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">FIAT LUX</div>
+  <div class="page-subtitle">Font Scheme — INSA Lyon1 iGEM 2022 &middot; Fira Sans + Fira Sans Extra Condensed</div>
+
+  <!-- ==================== FIRA SANS WEIGHTS ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Fira Sans</div>
+    <div class="section-note">Used for body, headings, navigation. A humanist sans-serif designed for legibility. Also references "Fira Sans Extra Condensed" in the stylesheet.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+
+    <div class="italic-row">
+      <div><div class="label">Light 300 Italic</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400 Italic</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500 Italic</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600 Italic</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700 Italic</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== FIRA SANS EXTRA CONDENSED ==================== -->
+  <section>
+    <div class="section-label">Condensed Variant — Fira Sans Extra Condensed</div>
+    <div class="section-note">Referenced in style2.css: <code>font-style: "Fira Sans Extra Condensed"</code>. Narrow, space-efficient style for compact displays.</div>
+
+    <div class="weight-row extra-condensed-row">
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+      <div class="item" style="font-family:'Fira Sans Extra Condensed',sans-serif;font-weight:600;font-style:italic;font-size:1.3rem;color:#589F7D;">Bold 700 Italic</div>
+      <div class="item" style="font-family:'Fira Sans Extra Condensed',sans-serif;font-weight:400;font-style:italic;font-size:1.3rem;color:#777;">Regular 400 Italic</div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADING ==================== -->
+  <section>
+    <div class="section-label">Headings — Fira Sans in the Wiki's Visual Hierarchy</div>
+    <div class="section-note">Recreating FIAT LUX's page heading patterns: hero text, glow-index, h2, h3, card headings.</div>
+
+    <div class="hero-heading">iGEM 2026 SHTU</div>
+    <p style="text-align:center;font-weight:400;color:#666;max-width:60ch;margin:0 auto 1.5rem;">
+      — just like the FIAT LUX home page hero banner
+    </p>
+
+    <div class="glow-index">Building a brighter future with FIAT LUX</div>
+    <p style="text-align:center;font-weight:400;color:#666;max-width:60ch;margin:0 auto 1.5rem;">
+      — replicating the .glow-index style from the home page
+    </p>
+
+    <div class="section-h2">Project Description</div>
+    <p style="font-weight:400;color:#555;max-width:72ch;margin-bottom:1.5rem;">
+      FIAT LUX leverages quorum quenching enzymes to disrupt bacterial communication in <em>Dickeya solani</em>, the causative agent of blackleg disease in potatoes. By degrading pathogen signaling molecules, we aim to provide a sustainable biocontrol alternative to chemical pesticides.
+    </p>
+
+    <div class="section-h3">How Quorum Quenching Works</div>
+    <p style="font-weight:400;color:#555;max-width:72ch;margin-bottom:1.5rem;">
+      Bacteria use N-acyl homoserine lactones (AHLs) as signaling molecules to coordinate virulence factor expression. Our engineered <em>E. coli</em> strains produce AHL-lactonases that hydrolyze these signals, effectively silencing the pathogen's attack.
+    </p>
+
+    <div class="section-h4">Key Innovation</div>
+    <p style="font-weight:400;color:#555;max-width:72ch;">
+      Unlike traditional antibiotics, quorum quenching does not kill bacteria — it disarms them. This reduces selective pressure for resistance, making it a more evolutionarily robust strategy for long-term disease management.
+    </p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — Fira Sans Regular 400</div>
+    <div class="section-note">Primary reading font. Clean, open apertures and generous x-height for readability at small sizes.</div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:#777;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== CARD STYLE ==================== -->
+  <section>
+    <div class="section-label">Content Cards — Fira Sans in .card-body</div>
+    <div class="section-note">style2.css explicitly sets .card-body font-family to Fira Sans. Recreating the card layout used throughout the wiki.</div>
+
+    <div class="card-sample">
+      <h3>Quorum Quenching</h3>
+      <p>The enzymatic degradation of bacterial signaling molecules prevents the activation of virulence genes without imposing selective pressure for resistance — a key advantage over conventional antibiotics.</p>
+    </div>
+    <div class="card-sample">
+      <h3>Blackleg Disease</h3>
+      <p>Caused by <em>Dickeya solani</em> and <em>Pectobacterium</em> spp., blackleg is one of the most destructive bacterial diseases in potato production, with yield losses reaching 20–30% in severe outbreaks across European growing regions.</p>
+    </div>
+    <div class="card-sample">
+      <h3>Sustainable Agriculture</h3>
+      <p>With increasing regulatory restrictions on chemical pesticides, biocontrol solutions like FIAT LUX represent a necessary step toward sustainable, resilient food production systems that meet both farmer and consumer expectations.</p>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Fira Sans Bold</div>
+    <div class="section-note">style2.css: <code>.nav-link { font-weight: bold; font-size: x-large; }</code>. Bold Fira Sans at large size for nav items.</div>
+    <div class="nav-sample">
+      <span class="nav-item">Home</span>
+      <span class="nav-item">Team</span>
+      <span class="nav-item">Project</span>
+      <span class="nav-item">Parts</span>
+      <span class="nav-item">Results</span>
+      <span class="nav-item">Human Practices</span>
+      <span class="nav-item">Relations</span>
+      <span class="nav-item">Awards</span>
+    </div>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — Courier / Monospace</div>
+    <div class="section-note">style2.css: <code>font-family: courier, monospace</code>. Classic typewriter-style monospace.</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">A straightforward two-font family system: Fira Sans for everything, with an Extra Condensed variant for compact layouts.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-menu);margin-bottom:0.5rem;">Font Family</div>
+        <div style="font-weight:400;color:#444;line-height:2;font-size:0.95rem;">
+          <strong>Fira Sans</strong> — Primary<br>
+          <strong>Fira Sans Extra Condensed</strong> — Compact variant<br>
+          <strong>Courier</strong> — Code / Monospace
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-menu);margin-bottom:0.5rem;">How It's Applied</div>
+        <div style="font-weight:400;color:#444;line-height:2;font-size:0.95rem;">
+          <code>&lt;body&gt;</code> → Fira Sans (400)<br>
+          <code>.nav-link</code> → Fira Sans Bold (x-large)<br>
+          <code>.card-body</code> → Fira Sans explicitly<br>
+          <code>code / pre</code> → Courier, monospace
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

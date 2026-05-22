@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — McGill iGEM 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-main: 'Onest', sans-serif;
+      --font-bubble: 'Open Sans', sans-serif;
+      --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+      --color-navy: #374d82;
+      --color-orange: #f29807;
+      --color-bg: #fefdf5;
+      --color-cream: #ffc66a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--color-bg);
+      color: #31373f;
+      font-family: var(--font-main);
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--color-navy);
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #6b7a99;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #e8e6df;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-navy);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #8895b0;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Onest Weights ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.3rem;
+      color: #31373f;
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8895b0;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Heading Styles ---- */
+    .hp-heading {
+      font-weight: 400;
+      font-size: 5rem;
+      color: var(--color-navy);
+      -webkit-text-stroke: 2px var(--color-bg);
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .applications-title {
+      font-weight: 700;
+      font-size: 3rem;
+      color: var(--color-navy);
+      margin-bottom: 0.5rem;
+    }
+    .application-subtitle {
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--color-navy);
+      margin-bottom: 0.5rem;
+    }
+    .section-h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      color: var(--color-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 700; }
+    .alphabet-grid .row .lower { color: #8895b0; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: var(--color-navy);
+    }
+    .numbers-big {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .numbers-big .num {
+      font-weight: 800;
+      font-size: 5rem;
+      color: var(--color-orange);
+      line-height: 1;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      color: #31373f;
+      max-width: 72ch;
+    }
+
+    /* ---- Nav ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-link-pill {
+      background: var(--color-cream);
+      color: var(--color-navy);
+      padding: 0.7rem 1.5rem;
+      border-radius: 1rem;
+      font-weight: 500;
+      cursor: default;
+      text-decoration: none;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    .nav-link-pill:hover { filter: brightness(0.95); }
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--color-navy);
+      margin-right: auto;
+    }
+
+    /* ---- Bubbles ---- */
+    .bubble-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+    .bubble {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(55,77,130,0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.2;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1), inset 0 2px 8px rgba(255,255,255,0.4);
+      cursor: default;
+    }
+    .bubble-label {
+      font-family: var(--font-bubble);
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: #f5f5f5;
+      text-align: center;
+      margin-top: 0.4rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* ---- Stats ---- */
+    .stat-card {
+      text-align: center;
+    }
+    .stat-card .map-numbers {
+      font-weight: 800;
+      font-size: 3.5rem;
+      color: var(--color-orange);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .stat-card .map-text {
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--color-navy);
+      line-height: 1.2;
+    }
+
+    /* ---- Content card ---- */
+    .content-card {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .content-card h3 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--color-navy);
+      margin-bottom: 0.35rem;
+    }
+    .content-card p {
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.55;
+    }
+
+    /* ---- Desc text ---- */
+    .desc-text {
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: #31373f;
+      line-height: normal;
+      max-width: 800px;
+    }
+
+    /* ---- Open Sans ---- */
+    .opensans-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .opensans-row .item {
+      font-family: var(--font-bubble);
+      font-size: 1.2rem;
+      color: #31373f;
+    }
+    .opensans-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8895b0;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Custom link ---- */
+    .custom-link {
+      color: var(--color-orange);
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: default;
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: var(--bs-font-monospace);
+      background: #31373f;
+      color: #f5f5f5;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #ffc66a; }
+    .code-block .str { color: #f29807; }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">McGill</div>
+  <div class="page-subtitle">Font Scheme — iGEM 2025 &middot; Onest (primary) + Open Sans (bubble labels)</div>
+
+  <!-- ==================== ONEST ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Onest</div>
+    <div class="section-note">Self-hosted as Onest-Regular.ttf (400) and Onest-ExtraBold.ttf (700). A modern geometric sans-serif with a friendly, rounded character. Used for everything: headings, body, nav, buttons, stats.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">ExtraBold 800</div><div class="item" style="font-weight:800;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADINGS ==================== -->
+  <section>
+    <div class="section-label">Heading Hierarchy — Onest</div>
+    <div class="section-note">Replicating McGill wiki's distinctive heading styles: HP headings with text stroke, application titles, and section headers.</div>
+
+    <div class="hp-heading" style="font-size:3.5rem;margin-bottom:0.5rem;">iGEM 2026 SHTU</div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-bottom:1.5rem;">— .hp-heading (400 weight, navy + text-stroke, large display titles)</p>
+
+    <div class="applications-title">Applications</div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-bottom:1rem;">— .applications-title (700 weight, 48px, navy)</p>
+
+    <div class="application-subtitle">Antimicrobial Resistance Detection</div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-bottom:1rem;">— .application-subtitle (600 weight, 32px)</p>
+
+    <div class="section-h2">Project Overview</div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-bottom:1.5rem;">— Typical section h2 (600 weight, 2rem)</p>
+
+    <!-- Desc text -->
+    <p class="desc-text">
+      Engineering biology to solve real-world problems requires innovative tools, collaborative spirit, and a deep commitment to responsible science.
+    </p>
+    <p style="font-size:0.8rem;color:#8895b0;margin-top:0.25rem;">— .desc-text (400 weight, 28px, for description blocks)</p>
+
+    <!-- Custom link -->
+    <p style="margin-top:1rem;">
+      <span class="custom-link">Learn more about our approach →</span>
+    </p>
+    <p style="font-size:0.8rem;color:#8895b0;">— .custom-link (700 weight, orange underline, Onest)</p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — Onest Regular 400</div>
+    <div class="section-note">Clean, geometric, excellent readability. Onest's rounded terminals give it a warm, approachable feel at text sizes.</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#8895b0;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#8895b0;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#8895b0;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== STATS & NUMBERS ==================== -->
+  <section>
+    <div class="section-label">KPI Statistics — Onest ExtraBold + Bold</div>
+    <div class="section-note">.map-numbers (800 weight, orange, 90px) paired with .map-text (700 weight, navy, 65px).</div>
+
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+      <div class="stat-card"><div class="map-numbers">24</div><div class="map-text">Team<br>Members</div></div>
+      <div class="stat-card"><div class="map-numbers">3</div><div class="map-text">Medals<br>Earned</div></div>
+      <div class="stat-card"><div class="map-numbers">12</div><div class="map-text">Parts<br>Submitted</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Onest Medium / SemiBold</div>
+    <div class="section-note">Nav links are pill-shaped buttons: cream background (#ffc66a), navy text (#374d82), Onest 500 weight.</div>
+    <div class="nav-sample" style="margin-bottom:1.5rem;">
+      <span class="nav-brand">McGill iGEM</span>
+      <span class="nav-link-pill">Home</span>
+      <span class="nav-link-pill">Project</span>
+      <span class="nav-link-pill">Wet Lab</span>
+      <span class="nav-link-pill">Dry Lab</span>
+      <span class="nav-link-pill">Human Practices</span>
+      <span class="nav-link-pill">Team</span>
+      <span class="nav-link-pill">Awards</span>
+    </div>
+
+    <!-- Dropdown replica -->
+    <div style="padding:0.75rem 1.25rem;background:#fff;border:1px solid #e8e6df;border-radius:0.75rem;max-width:250px;">
+      <div style="font-weight:600;font-size:0.85rem;color:var(--color-navy);padding:0.4rem 0;border-bottom:1px solid #eee;">Project</div>
+      <div style="font-weight:400;font-size:0.85rem;color:var(--color-navy);padding:0.4rem 0;cursor:default;">Description</div>
+      <div style="font-weight:400;font-size:0.85rem;color:var(--color-navy);padding:0.4rem 0;cursor:default;">Engineering</div>
+      <div style="font-weight:400;font-size:0.85rem;color:var(--color-navy);padding:0.4rem 0;cursor:default;">Results</div>
+      <div style="font-weight:400;font-size:0.85rem;color:var(--color-navy);padding:0.4rem 0;cursor:default;">Parts</div>
+    </div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-top:0.5rem;">— dropdown items: Onest 400, navy color</p>
+  </section>
+
+  <!-- ==================== BUBBLE NAV ==================== -->
+  <section>
+    <div class="section-label">Bubble Navigation — Onest + Open Sans</div>
+    <div class="section-note">Bubbles use Onest 600 for the bubble text and Open Sans 600 for the labels underneath. Self-hosted Onest pairs with system/browser Open Sans.</div>
+
+    <div class="bubble-row">
+      <div style="text-align:center;">
+        <div class="bubble">Project</div>
+        <div class="bubble-label">Description</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="bubble">Wet<br>Lab</div>
+        <div class="bubble-label">Experiments</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="bubble">Dry<br>Lab</div>
+        <div class="bubble-label">Model</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="bubble">Human<br>Practices</div>
+        <div class="bubble-label">Engagement</div>
+      </div>
+      <div style="text-align:center;">
+        <div class="bubble">Team</div>
+        <div class="bubble-label">Members</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:#8895b0;margin-top:1rem;">— Bubble text: <strong>Onest 600</strong> | Labels underneath: <strong>Open Sans 600</strong></p>
+  </section>
+
+  <!-- ==================== OPEN SANS ==================== -->
+  <section>
+    <div class="section-label">Secondary Font — Open Sans</div>
+    <div class="section-note">Used exclusively for bubble navigation labels. Not self-hosted — falls back to the system's Open Sans.</div>
+
+    <div class="opensans-row">
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+
+    <div style="font-family:var(--font-bubble);font-weight:400;font-size:0.9rem;color:#555;line-height:1.6;margin-bottom:0.5rem;">
+      <span style="font-weight:600;">A</span>a <span style="font-weight:600;">B</span>b <span style="font-weight:600;">C</span>c
+      <span style="font-weight:600;">D</span>d <span style="font-weight:600;">E</span>e <span style="font-weight:600;">F</span>f
+      <span style="font-weight:600;">G</span>g <span style="font-weight:600;">H</span>h <span style="font-weight:600;">I</span>i
+      <span style="font-weight:600;">J</span>j <span style="font-weight:600;">K</span>k <span style="font-weight:600;">L</span>l
+      <span style="font-weight:600;">M</span>m <span style="font-weight:600;">N</span>n <span style="font-weight:600;">O</span>o
+      <span style="font-weight:600;">P</span>p <span style="font-weight:600;">Q</span>q <span style="font-weight:600;">R</span>r
+      <span style="font-weight:600;">S</span>s <span style="font-weight:600;">T</span>t <span style="font-weight:600;">U</span>u
+      <span style="font-weight:600;">V</span>v <span style="font-weight:600;">W</span>w <span style="font-weight:600;">X</span>x
+      <span style="font-weight:600;">Y</span>y <span style="font-weight:600;">Z</span>z
+    </div>
+    <div style="font-family:var(--font-bubble);font-weight:500;font-size:1.2rem;color:var(--color-navy);">0 1 2 3 4 5 6 7 8 9</div>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — Bootstrap Monospace Stack</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">McGill uses Onest as its primary font — a friendly geometric sans-serif — with Open Sans reserved for bubble nav labels. A simple, cohesive two-font system.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-navy);margin-bottom:0.5rem;">Onest — Where It's Used</div>
+        <div style="color:#555;line-height:2;font-size:0.9rem;">
+          .hp-heading (large display, 400)<br>
+          .applications-title (page titles, 700)<br>
+          .application-subtitle (subheads, 600)<br>
+          .map-numbers (KPI stats, 800)<br>
+          .map-text (stat labels, 700)<br>
+          .nav-link / .dropdown-item (500/400)<br>
+          .desc-text (description blocks, 400)<br>
+          .navigation-text p (content, 400)<br>
+          body / p / h3 / .custom-link
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-navy);margin-bottom:0.5rem;">Open Sans — Where It's Used</div>
+        <div style="color:#555;line-height:2;font-size:0.9rem;">
+          .bubble-nav-home-label only<br>
+          <span style="color:#8895b0;">(bubble navigation labels, 600)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

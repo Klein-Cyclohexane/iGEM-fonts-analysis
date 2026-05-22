@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — Heidelberg PACE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-family-primary: 'Exo 2', sans-serif;
+      --clr-body: #100f12;
+      --clr-background: #F7FBFC;
+      --clr-accent-1: #c62e65;
+      --clr-accent-2: #2f97c1;
+      --clr-accent-2-8: #336896;
+      --clr-dark-blue: #3F4F65;
+      --clr-header: #3f4f65;
+      --clr-header-1: #657284;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--clr-background);
+      color: var(--clr-body);
+      font-family: var(--font-family-primary);
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-family: var(--font-family-primary);
+      font-weight: 900;
+      font-size: 3rem;
+      color: var(--clr-accent-1);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-family: var(--font-family-primary);
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: var(--clr-accent-2-8);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #d9dce0;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .section-label {
+      font-family: var(--font-family-primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--clr-accent-1);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--clr-header-1);
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight Rows ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-family: var(--font-family-primary);
+      font-size: 1.4rem;
+      color: var(--clr-body);
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--clr-header-1);
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Heading display ---- */
+    .heading-display {
+      font-family: var(--font-family-primary);
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--clr-dark-blue);
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-family: var(--font-family-primary);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 700; }
+    .alphabet-grid .row .lower { color: var(--clr-header-1); }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-family: var(--font-family-primary);
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: var(--clr-dark-blue);
+    }
+
+    .paragraph {
+      font-family: var(--font-family-primary);
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: var(--clr-body);
+      max-width: 72ch;
+    }
+
+    /* ---- Italics ---- */
+    .italic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 0.4rem 2rem;
+      margin-bottom: 1rem;
+    }
+    .italic-grid .item {
+      font-family: var(--font-family-primary);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--clr-body);
+    }
+    .italic-grid .wtag {
+      font-size: 0.6rem;
+      font-weight: 600;
+      font-style: normal;
+      color: var(--clr-header-1);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      width: 2.5rem;
+    }
+
+    /* ---- Nav ---- */
+    .nav-sample {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-family: var(--font-family-primary);
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--clr-dark-blue);
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--clr-header-4);
+    }
+    .nav-sample .nav-item { cursor: default; transition: color 0.2s; }
+    .nav-sample .nav-item:hover { color: var(--clr-accent-1); }
+    .nav-sample .nav-logo {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--clr-accent-1);
+      margin-right: auto;
+      letter-spacing: -0.01em;
+    }
+
+    /* ---- Code ---- */
+    .code-block {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Menlo', monospace;
+      background: #100f12;
+      color: #d5eaf3;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #c62e65; }
+    .code-block .str { color: #1ccad8; }
+
+    /* ---- Section headings (like h1, h2 in wiki) ---- */
+    .section-h1 {
+      font-family: var(--font-family-primary);
+      font-weight: 800;
+      font-size: 2rem;
+      color: var(--clr-header);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    .section-h2 {
+      font-family: var(--font-family-primary);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--clr-accent-2-8);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">PACE</div>
+  <div class="page-subtitle">Font Scheme — Heidelberg iGEM 2024</div>
+
+  <!-- ==================== EXO 2 — ALL WEIGHTS ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Exo 2 (100–900)</div>
+    <div class="section-note">Single-font design system. All weights self-hosted as .ttf + variable font. Used for both headings and body.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Thin 100</div><div class="item" style="font-weight:100;">The quick brown fox</div></div>
+      <div><div class="label">ExtraLight 200</div><div class="item" style="font-weight:200;">The quick brown fox</div></div>
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox</div></div>
+      <div><div class="label">ExtraBold 800</div><div class="item" style="font-weight:800;">The quick brown fox</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">The quick brown fox</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADING ==================== -->
+  <section>
+    <div class="section-label">Heading — Exo 2 Bold / ExtraBold</div>
+    <div class="section-note">Used via --ff-heading. Bold weights drive section titles and hero text.</div>
+    <div class="heading-display">iGEM 2026 SHTU</div>
+
+    <div class="section-h1">Project Description</div>
+    <p style="font-family:var(--font-family-primary);font-weight:400;color:var(--clr-header-1);max-width:72ch;margin-bottom:1.5rem;">
+      PACE (Phage-Assisted Continuous Evolution) enables rapid directed evolution of biomolecules by linking gene diversification to phage replication.
+    </p>
+
+    <div class="section-h2">Results &amp; Discussion</div>
+    <p style="font-family:var(--font-family-primary);font-weight:400;color:var(--clr-header-1);max-width:72ch;">
+      Our evolved polymerases showed a 15-fold increase in activity toward non-canonical substrates compared to the wild-type enzyme.
+    </p>
+  </section>
+
+  <!-- ==================== BODY — INTER ALPHABET + NUMBERS + PARAGRAPH ==================== -->
+  <section>
+    <div class="section-label">Body — Exo 2 Regular 400</div>
+    <div class="section-note">Primary reading font. Clean, geometric, highly legible at small sizes.</div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:var(--clr-header-1);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:var(--clr-header-1);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-size:0.7rem;font-weight:600;color:var(--clr-header-1);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== ITALIC WEIGHTS ==================== -->
+  <section>
+    <div class="section-label">Italics — Exo 2 (100–900 italic)</div>
+    <div class="section-note">Every weight has a matching italic variant. All self-hosted as separate .ttf files.</div>
+    <div class="italic-grid">
+      <div><span class="wtag">100</span><span class="item" style="font-weight:100;">The quick brown fox</span></div>
+      <div><span class="wtag">200</span><span class="item" style="font-weight:200;">The quick brown fox</span></div>
+      <div><span class="wtag">300</span><span class="item" style="font-weight:300;">The quick brown fox</span></div>
+      <div><span class="wtag">400</span><span class="item" style="font-weight:400;">The quick brown fox</span></div>
+      <div><span class="wtag">500</span><span class="item" style="font-weight:500;">The quick brown fox</span></div>
+      <div><span class="wtag">600</span><span class="item" style="font-weight:600;">The quick brown fox</span></div>
+      <div><span class="wtag">700</span><span class="item" style="font-weight:700;">The quick brown fox</span></div>
+      <div><span class="wtag">800</span><span class="item" style="font-weight:800;">The quick brown fox</span></div>
+      <div><span class="wtag">900</span><span class="item" style="font-weight:900;">The quick brown fox</span></div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Exo 2 Medium 500</div>
+    <div class="section-note">Nav links use the same font, medium weight for clarity.</div>
+    <div class="nav-sample">
+      <span class="nav-logo">PACE</span>
+      <span class="nav-item">Home</span>
+      <span class="nav-item">Project</span>
+      <span class="nav-item">Team</span>
+      <span class="nav-item">Parts</span>
+      <span class="nav-item">Safety</span>
+      <span class="nav-item">Human Practices</span>
+      <span class="nav-item">Awards</span>
+    </div>
+  </section>
+
+  <!-- ==================== CODE ==================== -->
+  <section>
+    <div class="section-label">Code — System Monospace Stack</div>
+    <div class="section-note">Not explicitly defined in the wiki CSS, but a sensible monospace complement for code display.</div>
+    <div class="code-block">
+      <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    </div>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Philosophy</div>
+    <div class="section-note">Single-font system — one typeface, many weights.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;font-family:var(--font-family-primary);">
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--clr-accent-1);margin-bottom:0.5rem;">Role</div>
+        <div style="font-weight:400;color:var(--clr-body);line-height:2;">
+          Headings<br>
+          Body text<br>
+          Navigation<br>
+          Captions<br>
+          Buttons &amp; CTAs
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--clr-accent-1);margin-bottom:0.5rem;">Weights Available</div>
+        <div style="font-weight:400;color:var(--clr-dark-blue);line-height:2;">
+          <span style="font-weight:100;">100 Thin</span><br>
+          <span style="font-weight:200;">200 ExtraLight</span><br>
+          <span style="font-weight:300;">300 Light</span><br>
+          <span style="font-weight:400;">400 Regular</span><br>
+          <span style="font-weight:500;">500 Medium</span><br>
+          <span style="font-weight:600;">600 SemiBold</span><br>
+          <span style="font-weight:700;">700 Bold</span><br>
+          <span style="font-weight:800;">800 ExtraBold</span><br>
+          <span style="font-weight:900;">900 Black</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Samples — PekingHSC 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vp-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+      --vp-font-family-mono: ui-monospace, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+      --vp-c-brand: #646cff;
+      --vp-c-text-1: #212529;
+      --vp-c-text-2: #495057;
+      --vp-c-bg: #f8f9fa;
+      --vp-c-border: #dee2e6;
+      --vp-c-code-bg: #f1f3f5;
+      --vp-c-text-code: #495057;
+      --vp-code-font-size: 0.875rem;
+      --vp-code-line-height: 1.7;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f8f9fa;
+      color: var(--vp-c-text-1);
+      font-family: var(--vp-font-family-base);
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      font-optical-sizing: auto;
+    }
+
+    .page-title {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #212529;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 0.25rem;
+    }
+    .page-subtitle {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #6c757d;
+      margin-bottom: 2.5rem;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .section-label {
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--vp-c-brand);
+      margin-bottom: 0.25rem;
+    }
+    .section-note {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #868e96;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ---- Weight Row ---- */
+    .weight-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .weight-row .item {
+      font-size: 1.25rem;
+      color: #212529;
+    }
+    .weight-row .label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #868e96;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- VitePress-style headings ---- */
+    .main-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #212529;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 0.75rem;
+    }
+    .vp-h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #212529;
+      margin-bottom: 0.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dee2e6;
+    }
+    .description {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: rgba(33,37,41,0.8);
+      line-height: 1.6;
+      max-width: 800px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ---- Alphabet ---- */
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.4rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .alphabet-grid .row {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+    .alphabet-grid .row .upper { font-weight: 700; }
+    .alphabet-grid .row .lower { color: #868e96; }
+
+    .numbers {
+      display: flex;
+      gap: 0.9rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 1.25rem;
+      color: #495057;
+    }
+
+    .paragraph {
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: #212529;
+      max-width: 72ch;
+    }
+
+    /* ---- Nav ---- */
+    .vp-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.6rem 1.5rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+    .vp-nav .nav-item {
+      color: #495057;
+      cursor: default;
+      transition: color 0.2s;
+    }
+    .vp-nav .nav-item:hover { color: var(--vp-c-brand); }
+    .vp-nav .nav-item.active { color: var(--vp-c-brand); font-weight: 600; }
+    .vp-nav .nav-logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #212529;
+      margin-right: auto;
+    }
+
+    /* ---- Code Block (Fira Code) ---- */
+    .code-block {
+      font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+      background: #f1f3f5;
+      color: #495057;
+      border: 1px solid #dee2e6;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+    .code-block .kw { color: #646cff; }
+    .code-block .str { color: #2b8a3e; }
+
+    /* ---- Fira Code Weights ---- */
+    .firacode-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-bottom: 1rem;
+    }
+    .firacode-row .item {
+      font-family: 'Fira Code', monospace;
+      font-size: 1rem;
+      color: #212529;
+    }
+    .firacode-row .label {
+      font-family: var(--vp-font-family-base);
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #868e96;
+      margin-bottom: 0.1rem;
+    }
+
+    /* ---- Inline code ---- */
+    code {
+      font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+      background: #f1f3f5;
+      color: #495057;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      border: 1px solid #dee2e6;
+    }
+
+    /* ---- Chinese section ---- */
+    .chinese-sample {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #212529;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <nav style="max-width:960px;margin:0 auto 2rem;"><a href="index.html" style="color:#4a6cf7;text-decoration:none;font-size:0.85rem;font-weight:600;">&larr; Back to Overview</a></nav>
+
+  <div class="page-title">PekingHSC</div>
+  <div class="page-subtitle">Font Scheme — iGEM 2025 &middot; VitePress default: Inter + Fira Code + System Mono</div>
+
+  <!-- ==================== INTER ==================== -->
+  <section>
+    <div class="section-label">Primary Font — Inter Variable (100–900)</div>
+    <div class="section-note">VitePress's --vp-font-family-base. Self-hosted as 7 Latin/Cyrillic/Greek/Vietnamese .woff2 subsets + 7 italic subsets. Used for all text: headings, body, nav, UI.</div>
+
+    <div class="weight-row">
+      <div><div class="label">Thin 100</div><div class="item" style="font-weight:100;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">ExtraLight 200</div><div class="item" style="font-weight:200;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Light 300</div><div class="item" style="font-weight:300;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">ExtraBold 800</div><div class="item" style="font-weight:800;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Black 900</div><div class="item" style="font-weight:900;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+
+    <div class="weight-row">
+      <div><div class="label">Thin 100 Italic</div><div class="item" style="font-weight:100;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Regular 400 Italic</div><div class="item" style="font-weight:400;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+      <div><div class="label">Bold 700 Italic</div><div class="item" style="font-weight:700;font-style:italic;">The quick brown fox jumps over the lazy dog</div></div>
+    </div>
+  </section>
+
+  <!-- ==================== HEADINGS ==================== -->
+  <section>
+    <div class="section-label">VitePress Heading Hierarchy — Inter</div>
+
+    <div class="main-title">iGEM 2026 SHTU</div>
+    <p style="font-size:0.8rem;color:#868e96;margin-bottom:1.5rem;">— .main-title (700 weight, clamp 3rem→5rem, letter-spacing 0.02em)</p>
+
+    <p class="description">
+      PekingHSC combines synthetic biology with hematopoietic stem cell engineering to develop novel therapeutic strategies for blood disorders. Our interdisciplinary approach integrates computational modeling, molecular cloning, and functional validation.
+    </p>
+    <p style="font-size:0.8rem;color:#868e96;margin-bottom:1.5rem;">— .description (400 weight, clamp 1.2rem→1.8rem)</p>
+
+    <div class="vp-h2" style="border-top:none;padding-top:0;">Project Overview</div>
+    <p style="color:#495057;margin-bottom:1rem;">
+      Hematopoietic stem cells (HSCs) are the foundation of the blood system, capable of both self-renewal and differentiation into all blood cell lineages. Our project focuses on engineering HSCs to correct genetic defects at the source.
+    </p>
+
+    <div class="vp-h2">Experimental Approach</div>
+    <p style="color:#495057;">
+      We employ CRISPR-Cas9 gene editing combined with AAV6-mediated homology-directed repair to achieve precise genetic modifications in primary human CD34+ hematopoietic stem and progenitor cells, followed by functional validation in xenotransplantation models.
+    </p>
+  </section>
+
+  <!-- ==================== BODY ==================== -->
+  <section>
+    <div class="section-label">Body — Inter Regular 400</div>
+    <div class="section-note">VitePress default. Inter's tall x-height, open apertures, and optical sizing make it excellent for documentation reading.</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#868e96;margin-bottom:0.5rem;">Alphabet</p>
+    <div class="alphabet-grid">
+      <div class="row"><span class="upper">A</span><span class="lower">a</span></div>
+      <div class="row"><span class="upper">B</span><span class="lower">b</span></div>
+      <div class="row"><span class="upper">C</span><span class="lower">c</span></div>
+      <div class="row"><span class="upper">D</span><span class="lower">d</span></div>
+      <div class="row"><span class="upper">E</span><span class="lower">e</span></div>
+      <div class="row"><span class="upper">F</span><span class="lower">f</span></div>
+      <div class="row"><span class="upper">G</span><span class="lower">g</span></div>
+      <div class="row"><span class="upper">H</span><span class="lower">h</span></div>
+      <div class="row"><span class="upper">I</span><span class="lower">i</span></div>
+      <div class="row"><span class="upper">J</span><span class="lower">j</span></div>
+      <div class="row"><span class="upper">K</span><span class="lower">k</span></div>
+      <div class="row"><span class="upper">L</span><span class="lower">l</span></div>
+      <div class="row"><span class="upper">M</span><span class="lower">m</span></div>
+      <div class="row"><span class="upper">N</span><span class="lower">n</span></div>
+      <div class="row"><span class="upper">O</span><span class="lower">o</span></div>
+      <div class="row"><span class="upper">P</span><span class="lower">p</span></div>
+      <div class="row"><span class="upper">Q</span><span class="lower">q</span></div>
+      <div class="row"><span class="upper">R</span><span class="lower">r</span></div>
+      <div class="row"><span class="upper">S</span><span class="lower">s</span></div>
+      <div class="row"><span class="upper">T</span><span class="lower">t</span></div>
+      <div class="row"><span class="upper">U</span><span class="lower">u</span></div>
+      <div class="row"><span class="upper">V</span><span class="lower">v</span></div>
+      <div class="row"><span class="upper">W</span><span class="lower">w</span></div>
+      <div class="row"><span class="upper">X</span><span class="lower">x</span></div>
+      <div class="row"><span class="upper">Y</span><span class="lower">y</span></div>
+      <div class="row"><span class="upper">Z</span><span class="lower">z</span></div>
+    </div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#868e96;margin-bottom:0.5rem;">Numerals</p>
+    <div class="numbers">0 1 2 3 4 5 6 7 8 9</div>
+
+    <p style="font-weight:600;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.06em;color:#868e96;margin-bottom:0.5rem;">Paragraph</p>
+    <p class="paragraph">
+      In the field of synthetic biology, the design of genetic circuits often involves iterative cycles of modeling, assembly, and testing. The choice of a typeface might seem trivial compared to the complexity of gene regulation, yet it plays a crucial role in communicating your results effectively. Judges and visitors to your iGEM wiki will spend considerable time reading your project description, experiments, and conclusions. Therefore, selecting a highly legible font ensures that your hard work is presented in the most accessible manner possible, reducing cognitive load and enhancing overall comprehension.
+    </p>
+  </section>
+
+  <!-- ==================== CHINESE ==================== -->
+  <section>
+    <div class="section-label">Chinese Support — Punctuation SC + Inter</div>
+    <div class="section-note">VitePress's Chinese config uses "Punctuation SC" (PingFang SC / Noto Sans CJK SC / Microsoft YaHei) for punctuation unicode ranges, with Inter for Latin characters.</div>
+
+    <p class="chinese-sample">
+      <strong>标题</strong> — 合成生物学代表了工程原理与生命科学的融合，使我们能够以前所未有的精度设计和构建生物系统。<code>CRISPR-Cas9</code> 基因编辑技术为造血干细胞的精准修饰提供了强大的工具。
+    </p>
+    <p style="font-size:0.8rem;color:#868e96;">— 中文段落: Inter displays Latin text; Chinese glyphs fall back to system CJK fonts</p>
+
+    <div style="font-weight:500;font-size:1rem;color:#495057;margin-top:0.75rem;">
+      <span style="font-weight:700;">Punctuation SC</span> — local("PingFang SC"), local("Noto Sans CJK SC"), local("Microsoft YaHei")
+    </div>
+    <p style="font-size:0.8rem;color:#868e96;">Unicode ranges: 「 」 『 』 " " — — … /</p>
+  </section>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <section>
+    <div class="section-label">Navigation — Inter Medium / SemiBold</div>
+    <div class="section-note">VitePress-style nav bar with Inter 500. Clean and minimal.</div>
+    <div class="vp-nav">
+      <span class="nav-logo">PekingHSC</span>
+      <span class="nav-item active">Home</span>
+      <span class="nav-item">Project</span>
+      <span class="nav-item">Team</span>
+      <span class="nav-item">Parts</span>
+      <span class="nav-item">Safety</span>
+      <span class="nav-item">Human Practices</span>
+      <span class="nav-item">Awards</span>
+    </div>
+
+    <!-- Search-like pill -->
+    <div style="margin-top:1rem;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border:1px solid #dee2e6;border-radius:2rem;max-width:300px;font-size:0.85rem;color:#868e96;">
+      <span>&#8984;K</span>
+      <span>Search</span>
+    </div>
+    <p style="font-size:0.8rem;color:#868e96;margin-top:0.5rem;">— DocSearch button: Inter 500, 12px, using --vp-font-family-base</p>
+  </section>
+
+  <!-- ==================== FIRA CODE ==================== -->
+  <section>
+    <div class="section-label">Code Font — Fira Code</div>
+    <div class="section-note">VitePress inline code uses <code>font-family: Fira Code, Monaco, Consolas, monospace</code>. Self-hosted Fira Code with programming ligatures.</div>
+
+    <div class="firacode-row">
+      <div><div class="label">Regular 400</div><div class="item" style="font-weight:400;">const sequence = "ATCG" // ligatures: !=, =>, ==</div></div>
+      <div><div class="label">Medium 500</div><div class="item" style="font-weight:500;">const sequence = "ATCG" // ligatures: !=, =>, ==</div></div>
+      <div><div class="label">SemiBold 600</div><div class="item" style="font-weight:600;">const sequence = "ATCG" // ligatures: !=, =>, ==</div></div>
+      <div><div class="label">Bold 700</div><div class="item" style="font-weight:700;">const sequence = "ATCG" // ligatures: !=, =>, ==</div></div>
+    </div>
+
+    <div class="code-block">
+<span style="color:#6c757d;"># Gene editing pipeline — PekingHSC 2025</span>
+<span class="kw">def</span> <span style="color:#364fc7;">edit_hsc</span>(<span style="color:#495057;">target_gene</span>: <span style="color:#2b8a3e;">str</span>, <span style="color:#495057;">donor_template</span>: <span style="color:#2b8a3e;">str</span>) -> <span style="color:#2b8a3e;">bool</span>:
+    <span style="color:#6c757d;"># Design sgRNA and validate off-targets</span>
+    <span style="color:#495057;">sgRNA</span> = <span style="color:#364fc7;">design_guide</span>(target_gene)
+    <span style="color:#364fc7;">validate_specificity</span>(sgRNA)
+    <span class="kw">print</span>(<span class="str">"Hello iGEM 2026!"</span>)
+    <span class="kw">return</span> <span style="color:#e8590c;">True</span>
+    </div>
+
+    <p style="margin-top:1rem;">
+      Inline: <code>gRNA_design()</code> <code>repair_template.fasta</code> <code>HDR_efficiency ≥ 30%</code>
+    </p>
+  </section>
+
+  <!-- ==================== SUMMARY ==================== -->
+  <section>
+    <div class="section-label">Design Summary</div>
+    <div class="section-note">PekingHSC uses VitePress's default font stack — a battle-tested documentation typography system.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--vp-c-brand);margin-bottom:0.5rem;">Font Stack</div>
+        <div style="color:#495057;line-height:2;font-size:0.9rem;">
+          <strong>Inter</strong> — all text (100–900)<br>
+          <strong>Fira Code</strong> — inline code blocks<br>
+          <strong>ui-monospace</strong> — code blocks<br>
+          <strong>Punctuation SC</strong> — Chinese punct.<br>
+          <span style="color:#868e96;">14 Inter .woff2 files (7 roman + 7 italic)<br>by Unicode subset, all self-hosted</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:600;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--vp-c-brand);margin-bottom:0.5rem;">CSS Variables</div>
+        <div style="color:#495057;line-height:2;font-size:0.9rem;">
+          --vp-font-family-base → Inter<br>
+          --vp-font-family-mono → ui-monospace stack<br>
+          VitePress v1.6.3 defaults<br>
+          <span style="color:#868e96;">No Google Fonts, no CDN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
